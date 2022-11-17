@@ -23,5 +23,15 @@ namespace NeuroAnalyzer
         {
             InitializeComponent();
         }
+
+        public VideoLecture(VideoLectureClass a)
+        {
+            InitializeComponent();
+
+            Browser.LoadUrlAsync(a.URL);
+            Name.Text = a.Title;
+            Description.Text = a.Description;
+            this.Title = a.Title;
+        }
     }
 }

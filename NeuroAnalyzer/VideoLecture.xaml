@@ -10,20 +10,28 @@
     <Grid Margin="20,20,20,20">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="230"/>
+            <ColumnDefinition Width="300"/>
         </Grid.ColumnDefinitions>
 
         <StackPanel>
             <wpf:ChromiumWebBrowser x:Name="Browser" Address="https://www.youtube.com/embed/Elvt-w_TKSU" Height="295" Margin="0,0,0,5"/>
             <Grid>
                 <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30"/>
-                <TextBlock Text="Джон Кехо. Как проработать страх в подсознании? Как избавиться от страха и тревожности?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
             </Grid>
             <Grid Margin="0,5,0,0">
                 <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="110"/>
-                <TextBlock Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время. Чтобы избавиться от глубоко укоренившихся страхов, в первую очередь надо осознать, что этот страх сформировал определенный сценарий в подсознании, поэтому вы не сможете его смогу преодолеть его силой воли, просто заставив себя не бояться, запретив себе испытывать этот страх." TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+                <TextBlock x:Name="Description" Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время." TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
             </Grid>
             
+        </StackPanel>
+        <StackPanel Margin="20,0,0,0" Grid.Column="1">
+            <Grid>
+                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="60"/>
+                <TextBlock Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+            </Grid>
+            <Image Margin="0,10,0,0" Source="/Images/Video lecture2.png" Stretch="Fill"/>
+            <Image Margin="0,10,0,0" Source="/Images/Video lecture3.png" Stretch="Fill"/>
         </StackPanel>
 
     </Grid>
