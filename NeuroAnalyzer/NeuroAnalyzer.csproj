@@ -7,4 +7,60 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\Background.png" />
+    <None Remove="Images\Good.png" />
+    <None Remove="Images\GoodGreen.png" />
+    <None Remove="Images\Information.png" />
+    <None Remove="Images\Instruction manual1.png" />
+    <None Remove="Images\Instruction manual2.png" />
+    <None Remove="Images\Instruction manual3.png" />
+    <None Remove="Images\Instruction manual4.png" />
+    <None Remove="Images\Instruction manual5.png" />
+    <None Remove="Images\Lectures on psychology.jpg" />
+    <None Remove="Images\Literature1.png" />
+    <None Remove="Images\Literature2.png" />
+    <None Remove="Images\Literature3.png" />
+    <None Remove="Images\Literature4.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\Neuro testing.jpg" />
+    <None Remove="Images\Psychological testing.jpg" />
+    <None Remove="Images\Settings.png" />
+    <None Remove="Images\Unsatisfactory.png" />
+    <None Remove="Images\UnsatisfactoryRed.png" />
+    <None Remove="Images\Video lecture1.png" />
+    <None Remove="Images\Video lecture2.png" />
+    <None Remove="Images\Video lecture3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Background.png" />
+    <Resource Include="Images\Good.png" />
+    <Resource Include="Images\GoodGreen.png" />
+    <Resource Include="Images\Information.png" />
+    <Resource Include="Images\Instruction manual1.png" />
+    <Resource Include="Images\Instruction manual2.png" />
+    <Resource Include="Images\Instruction manual3.png" />
+    <Resource Include="Images\Instruction manual4.png" />
+    <Resource Include="Images\Instruction manual5.png" />
+    <Resource Include="Images\Lectures on psychology.jpg" />
+    <Resource Include="Images\Literature1.png" />
+    <Resource Include="Images\Literature2.png" />
+    <Resource Include="Images\Literature3.png" />
+    <Resource Include="Images\Literature4.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\Neuro testing.jpg" />
+    <Resource Include="Images\Psychological testing.jpg" />
+    <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\Unsatisfactory.png" />
+    <Resource Include="Images\UnsatisfactoryRed.png" />
+    <Resource Include="Images\Video lecture1.png" />
+    <Resource Include="Images\Video lecture2.png" />
+    <Resource Include="Images\Video lecture3.png" />
+  </ItemGroup>
+
 </Project>
