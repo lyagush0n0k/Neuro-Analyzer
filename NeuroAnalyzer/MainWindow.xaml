@@ -10,37 +10,37 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
         </Grid.RowDefinitions>
         <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
         <StackPanel Orientation="Horizontal" Margin="0,40,0,20" HorizontalAlignment="Center">
-            <Button Width="200" FontSize="24" Foreground="White" BorderBrush="Black">
+            <Button Width="200" FontSize="24" Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg"/>
                 </Button.Background>
-                <Grid Background="#7F000000" Height="324" Width="200">
+                <Grid Background="#7F000000" Height="304" Width="200">
                     <TextBlock Text="Нейро тестирование" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
                 </Grid>
             </Button>
-            <Button Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White">
+            <Button Click="LectureButton_Click" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Lectures on psychology.jpg"/>
                 </Button.Background>
-                <Grid Background="#7F000000" Height="324" Width="200">
+                <Grid Background="#7F000000" Height="304" Width="200">
                     <TextBlock Text="Лекции по психолгии" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
                 </Grid>
             </Button>
-            <Button Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White">
+            <Button Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Psychological testing.jpg" AlignmentX="Center"/>
                 </Button.Background>
-                <Grid Background="#7F000000" Height="324" Width="200">
+                <Grid Background="#7F000000" Height="304" Width="200">
                     <TextBlock Text="Психологическое тестирование" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
                 </Grid>
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,20,0">
+        <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,20,0" Height="50">
             <Button Width="50" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/Settings.png"/>

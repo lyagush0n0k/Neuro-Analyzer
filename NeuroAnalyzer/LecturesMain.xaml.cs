@@ -10,25 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для LecturesMain.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LecturesMain : Window
     {
-        public MainWindow()
+        public LecturesMain()
         {
             InitializeComponent();
-        }
-
-        private void LectureButton_Click(object sender, RoutedEventArgs e)
-        {
-            LecturesMain lectures = new LecturesMain();
-            lectures.Show();
         }
     }
 }
