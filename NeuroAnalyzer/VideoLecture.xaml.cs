@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Логика взаимодействия для LecturesMain.xaml
+    /// Логика взаимодействия для VideoLecture.xaml
     /// </summary>
-    public partial class LecturesMain : Window
+    public partial class VideoLecture : Window
     {
-        public LecturesMain()
+        public VideoLecture()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            VideoLecture lectures = new VideoLecture();
-            lectures.Show();
         }
     }
 }

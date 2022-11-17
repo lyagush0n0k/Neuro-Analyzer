@@ -37,10 +37,6 @@
     <Folder Include="Resources\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="CefSharp.Wpf.NETCore" Version="107.1.90" />
-  </ItemGroup>
-
   <PropertyGroup Condition="'$(PlatformTarget)' == 'x86'">
     <RuntimeIdentifier Condition="'$(RuntimeIdentifier)' == ''">win-x86</RuntimeIdentifier>
     <SelfContained Condition="'$(SelfContained)' == ''">false</SelfContained>
