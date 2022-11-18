@@ -9,8 +9,8 @@
     <Grid>
         <Image Source="/Images/Background.png" Stretch="Fill"/>
         <Image Margin="0 0 700 380" Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill"/>
+        <TextBlock Margin="0 50 0 0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25"><Run Text="Приветствуем!"/><LineBreak/><Run Text="Давайте подключим оборудование, следуйте инструкциям на экране." /></TextBlock>
         <Button Margin="0 300 0 0" Content="Начать" FontSize="20" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="Button_Start_Click" Style="{DynamicResource RoundButton}"/>
-        <TextBlock Margin="0 50 0 0" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" Text="Приветствуем! Давайте подключим оборудование, следуйте инструкциям на экране." />
-        <Frame x:Name="frame" Content="Frame"></Frame>
+        <Frame x:Name="InstuctionFrame" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Window>

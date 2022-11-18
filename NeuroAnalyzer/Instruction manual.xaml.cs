@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace NeuroAnalyzer
@@ -17,7 +18,7 @@ namespace NeuroAnalyzer
     /// <summary>
     /// Логика взаимодействия для Instruction_manual.xaml
     /// </summary>
-    public partial class Instruction_manual : Window
+    public partial class Instruction_manual
     {
         public Instruction_manual()
         {
@@ -30,7 +31,7 @@ namespace NeuroAnalyzer
 
         private void Button_Start_Click(object sender, RoutedEventArgs e)
         {
-
+            InstuctionFrame.Navigate(new Insruction_manual2());
         }
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
