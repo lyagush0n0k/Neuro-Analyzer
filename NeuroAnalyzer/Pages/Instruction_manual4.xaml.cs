@@ -1,26 +1,26 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
     ///     Логика взаимодействия для Instruction_manual4.xaml
     /// </summary>
-    public partial class Instruction_manual4 : Page
+    public partial class InstructionManual4 : Page
     {
-        public Instruction_manual4()
+        public InstructionManual4()
         {
             InitializeComponent();
         }
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Instruction_manual3());
+            NavigationService.Navigate(new InstructionManual3());
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Instruction_manual5());
+            NavigationService.Navigate(new InstructionManual5());
         }
     }
 }

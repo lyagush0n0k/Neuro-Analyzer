@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
     ///     Логика взаимодействия для LecturesMainPage.xaml

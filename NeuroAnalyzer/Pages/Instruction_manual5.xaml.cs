@@ -1,15 +1,14 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using NeuroAnalyzer.Pages;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
     ///     Логика взаимодействия для Instruction_manual5.xaml
     /// </summary>
-    public partial class Instruction_manual5 : Page
+    public partial class InstructionManual5 : Page
     {
-        public Instruction_manual5()
+        public InstructionManual5()
         {
             InitializeComponent();
         }

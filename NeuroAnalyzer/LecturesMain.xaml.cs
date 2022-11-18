@@ -7,13 +7,13 @@ namespace NeuroAnalyzer
     /// </summary>
     public partial class LecturesMain : Window
     {
+        private readonly VideoLectureClass lecture1;
+        private readonly VideoLectureClass lecture2;
+        private readonly VideoLectureClass lecture3;
         private BookInfo book1;
         private BookInfo book2;
         private BookInfo book3;
         private BookInfo book4;
-        private readonly VideoLectureClass lecture1;
-        private readonly VideoLectureClass lecture2;
-        private readonly VideoLectureClass lecture3;
 
         public LecturesMain()
         {
@@ -37,19 +37,19 @@ namespace NeuroAnalyzer
             );
         }
 
-        private void FirstLectionButton_Click(object sender, RoutedEventArgs e)
+        private void FirstLectureButton_Click(object sender, RoutedEventArgs e)
         {
             VideoLecture lectures = new(lecture1);
             lectures.Show();
         }
 
-        private void SecondLectionButton_Click(object sender, RoutedEventArgs e)
+        private void SecondLectureButton_Click(object sender, RoutedEventArgs e)
         {
             VideoLecture lectures = new(lecture2);
             lectures.Show();
         }
 
-        private void ThirdLectionButton_Click(object sender, RoutedEventArgs e)
+        private void ThirdLectureButton_Click(object sender, RoutedEventArgs e)
         {
             VideoLecture lectures = new(lecture3);
             lectures.Show();

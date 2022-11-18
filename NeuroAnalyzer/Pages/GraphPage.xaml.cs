@@ -12,20 +12,20 @@ namespace NeuroAnalyzer.Pages
     /// </summary>
     public partial class GraphPage : Page
     {
+        private Timer _graphUpdateTimer;
         private double _graphWidth, _graphHeight;
-        private Timer graphUpdateTimer;
 
         public GraphPage()
         {
             InitializeComponent();
 
-            SpectrumGrid.Height = mainStack.Height / 2;
-            GraphGrid.Height = mainStack.Height / 2;
+            SpectrumGrid.Height = MainStack.Height / 2;
+            GraphGrid.Height = MainStack.Height / 2;
         }
 
         private void GraphLoaded(object sender, RoutedEventArgs e)
         {
-            graphUpdateTimer = new Timer(RefreshGraph, new AutoResetEvent(false), 0, 10);
+            _graphUpdateTimer = new Timer(RefreshGraph, new AutoResetEvent(false), 0, 10);
         }
 
         private void RefreshGraph(object? obj)

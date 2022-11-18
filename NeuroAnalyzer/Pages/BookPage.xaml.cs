@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
     ///     Логика взаимодействия для BookPage.xaml

@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO.Ports;
-using System.Linq;
 using System.Threading;
 
 namespace NeuroAnalyzer
 {
-    public class SerialInterfaceClass
+    public static class SerialInterfaceClass
     {
         private static readonly SerialPort _port = new();
         private static readonly Thread _serialThread = new(ReadData);
@@ -15,7 +14,7 @@ namespace NeuroAnalyzer
 
         public static void Init()
         {
-            for (var i = 0; i < 32; i++) _graphData.Append(0);
+            for (var i = 0; i < 32; i++) _graphData.Add(0);
         }
 
         public static string[] GetAvailablePorts()
@@ -55,28 +54,26 @@ namespace NeuroAnalyzer
             while (true)
                 try
                 {
-                    if (_port.BytesToRead > 0)
+                    if (_port.BytesToRead <= 0) continue;
+                    while (_port.ReadByte() != 0xAC)
                     {
-                        while (_port.ReadByte() != 0xAC) ;
-
-                        if (_port.ReadByte() == 0xAB)
-                        {
-                            Thread.Sleep(2);
-
-                            var l = _port.ReadByte();
-                            var h = _port.ReadByte();
-                            _graphData.Add(((h << 8) | l) - 512);
-                            _graphData.Remove(0);
-                            for (var i = 0; i < 32; i++)
-                            {
-                                l = _port.ReadByte();
-                                h = _port.ReadByte();
-                                _spectrumData[i] = (h << 8) | l;
-                            }
-
-                            _port.DiscardInBuffer();
-                        }
                     }
+
+                    if (_port.ReadByte() != 0xAB) continue;
+                    Thread.Sleep(2);
+
+                    var l = _port.ReadByte();
+                    var h = _port.ReadByte();
+                    _graphData.Add(((h << 8) | l) - 512);
+                    _graphData.Remove(0);
+                    for (var i = 0; i < 32; i++)
+                    {
+                        l = _port.ReadByte();
+                        h = _port.ReadByte();
+                        _spectrumData[i] = (h << 8) | l;
+                    }
+
+                    _port.DiscardInBuffer();
                 }
                 catch (Exception)
                 {

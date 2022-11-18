@@ -1,21 +1,21 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
     ///     Логика взаимодействия для Port_Selection.xaml
     /// </summary>
-    public partial class Port_Selection : Page
+    public partial class PortSelection : Page
     {
-        public Port_Selection()
+        public PortSelection()
         {
             InitializeComponent();
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Instruction_manual2());
+            NavigationService.Navigate(new InstructionManual2());
             SerialInterfaceClass.Init();
             SerialInterfaceClass.SetPort("COM4");
             SerialInterfaceClass.StartReading();
@@ -23,7 +23,7 @@ namespace NeuroAnalyzer
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Instruction_manual1());
+            NavigationService.Navigate(new InstructionManual1());
         }
     }
 }
