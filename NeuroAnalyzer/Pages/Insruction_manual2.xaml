@@ -15,6 +15,6 @@
         <TextBlock Margin="0,20,0,285" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ><Run Text="Закрепим ободок на голове."/><LineBreak/><Run Text="Расстегнутый ободок расположите так, чтобы сигнальные электроды располагались на затылке и надежно контактировали с кожей, а затем закрепите свободные концы на лбу. Не затягиваете ободок, поскольку это может вызвать неприятные ощущения."/></TextBlock>
         <Image Margin="30,170,447,98" Source="/Images/Instruction manual1.png" Stretch="Fill"/>
         <Image Margin="442,170,30,95" Source="/Images/Instruction manual2.png" Stretch="Fill"/>
-        <Image  Source="/Images/Arrow.png" Stretch="Fill" StretchDirection="Both" Width="90" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,252,0,0"/>
+        <Image  Source="/Images/Arrow.png" Stretch="Fill" StretchDirection="Both" Width="89" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="353,250,0,0"/>
     </Grid>
 </Page>
