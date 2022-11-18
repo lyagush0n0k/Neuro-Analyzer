@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Логика взаимодействия для VideoLecturePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class VideoLecturePage : Page
     {
-        public MainWindow()
+        public VideoLecturePage()
         {
             InitializeComponent();
-            MainFrame.Content = new MainPage();
         }
     }
 }
