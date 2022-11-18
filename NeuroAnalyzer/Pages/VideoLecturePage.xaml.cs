@@ -24,5 +24,10 @@ namespace NeuroAnalyzer
         {
             InitializeComponent();
         }
+
+        private void ReturnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new LecturesMainPage());
+        }
     }
 }

@@ -22,19 +22,20 @@
                 <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
             </Grid>
             <Grid Margin="0,5,0,0">
-                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="110"/>
+                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
                 <TextBlock x:Name="Description" Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время." TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
             </Grid>
 
         </StackPanel>
         <StackPanel Margin="20,0,0,0" Grid.Column="1">
             <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="60"/>
-                <TextBlock Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30"/>
+                <TextBlock Text="Другие лекции" FontSize="22" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
             </Grid>
             <Image Margin="0,10,0,0" Source="/Images/Video lecture2.png" Stretch="Fill"/>
             <Image Margin="0,10,0,0" Source="/Images/Video lecture3.png" Stretch="Fill"/>
-        </StackPanel>
+                <Button  Margin="0,10,0,0" x:Name="ReturnBtn" Style="{DynamicResource RoundButton}" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" FontSize="15" Content="Перейти к предыдущему разделу"  Click="ReturnBtn_Click" Height="30" />
+            </StackPanel>
 
     </Grid>
         <Frame x:Name="MainFrame" Grid.RowSpan="2"></Frame>
