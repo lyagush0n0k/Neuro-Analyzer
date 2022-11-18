@@ -29,5 +29,10 @@ namespace NeuroAnalyzer
         {
             NavigationService.Navigate(new LecturesMainPage());
         }
+
+        private void Button_Neiro_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Instuction_manual1());
+        }
     }
 }
