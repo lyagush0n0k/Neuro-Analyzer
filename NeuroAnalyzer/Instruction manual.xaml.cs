@@ -22,12 +22,19 @@ namespace NeuroAnalyzer
         public Instruction_manual()
         {
             InitializeComponent();
-            Hello.Text = "Приветствуем!\r\nДавайте подключим оборудование, следуйте инструкциям на экране.";
+            double screenHeight = SystemParameters.FullPrimaryScreenHeight;
+            double screenWidth = SystemParameters.FullPrimaryScreenWidth;
+            this.Top = (screenHeight - this.Height) / 0x00000002;
+            this.Left = (screenWidth - this.Width) / 0x00000002;
         }
 
         private void Button_Start_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }
