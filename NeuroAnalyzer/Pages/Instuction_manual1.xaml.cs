@@ -26,11 +26,11 @@ namespace NeuroAnalyzer
         }
         private void Button_Start_Click(object sender, RoutedEventArgs e)
         {
-            InstuctionFrame.Navigate(new Insruction_manual2());
+            InstuctionFrame2.Navigate(new Insruction_manual2());
         }
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            InstuctionFrame2.Navigate(new MainPage());
         }
     }
 }
