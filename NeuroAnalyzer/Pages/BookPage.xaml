@@ -12,7 +12,7 @@
         <ScrollViewer>
             <Grid Margin="20,20,20,20">
                 <Grid.RowDefinitions>
-                    <RowDefinition />
+                    <RowDefinition Height="0.5*" />
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
                 <Grid>
@@ -20,7 +20,7 @@
                         <ColumnDefinition Width="0.5*" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <Image x:Name="BookImage" Source="/Images/Literature1.png" Stretch="Fill" Width="155" Height="243" />
+                    <Image x:Name="BookImage" MaxHeight="385" Source="/Images/Literature1.png" Margin="0,0,15,0"/>
                     <StackPanel Grid.Column="1" Margin="0,0,0,0">
                         <Button Style="{DynamicResource RoundButton}" Height="50" Background="#FF2C99B0"
                                 BorderBrush="{x:Null}" Click="ReturnBtn_Click">
