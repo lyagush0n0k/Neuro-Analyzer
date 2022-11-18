@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using NeuroAnalyzer.Pages;
 
 namespace NeuroAnalyzer
 {
@@ -33,6 +34,11 @@ namespace NeuroAnalyzer
         private void Button_Neiro_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Instuction_manual1());
+        }
+
+        private void NeuroTestButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new GraphPage());
         }
     }
 }
