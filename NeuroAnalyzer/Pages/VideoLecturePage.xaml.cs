@@ -29,5 +29,10 @@ namespace NeuroAnalyzer
             Description.Text = a.Description;
             this.Title = a.Title;
         }
+
+        private void ReturnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new LecturesMainPage());
+        }
     }
 }
