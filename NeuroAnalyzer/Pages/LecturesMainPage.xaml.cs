@@ -25,14 +25,10 @@ namespace NeuroAnalyzer
             InitializeComponent();
         }
 
-        private void Return_click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new MainPage());
-        }
 
         private void FirstLectionButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Content = new LecturesMainPage();
+            MainFrame.Content = new VideoLecturePage();
         }
         private void SecondLectionButton_Click(object sender, RoutedEventArgs e)
         {
@@ -41,6 +37,11 @@ namespace NeuroAnalyzer
         private void ThirdLectionButton_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Content = new LecturesMainPage();
+        }
+
+        private void ReturnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainPage());
         }
     }
 }
