@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\Arrow.png" />
     <None Remove="Images\Background.png" />
     <None Remove="Images\Good.png" />
     <None Remove="Images\GoodGreen.png" />
@@ -56,6 +57,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
     <Resource Include="Images\Background.png" />
     <Resource Include="Images\Good.png" />
     <Resource Include="Images\GoodGreen.png" />

@@ -10,11 +10,11 @@
 
     <Grid Background="White">
         <Image Source="/Images/Background.png" Stretch="Fill"/>
-        <Image Margin="353,252,358,166" Source="/Images/Arrow.png" Stretch="Fill"/>
         <Image Margin="0 0 700 380" Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill"/>
         <Button Margin="0 360 0 0" Content="Далее" FontSize="20" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"  Style="{DynamicResource RoundButton}"/>
         <TextBlock Margin="0,20,0,285" TextWrapping="Wrap" TextAlignment="Center" FontSize="20" ><Run Text="Закрепим ободок на голове."/><LineBreak/><Run Text="Расстегнутый ободок расположите так, чтобы сигнальные электроды располагались на затылке и надежно контактировали с кожей, а затем закрепите свободные концы на лбу. Не затягиваете ободок, поскольку это может вызвать неприятные ощущения."/></TextBlock>
         <Image Margin="30,170,447,98" Source="/Images/Instruction manual1.png" Stretch="Fill"/>
         <Image Margin="442,170,30,95" Source="/Images/Instruction manual2.png" Stretch="Fill"/>
+        <Image  Source="/Images/Arrow.png" Stretch="Fill" StretchDirection="Both" Width="90" Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,252,0,0"/>
     </Grid>
 </Page>
