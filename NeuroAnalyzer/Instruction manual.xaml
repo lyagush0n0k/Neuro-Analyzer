@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="Instruction_manual" Height="450" Width="800">
     <Grid>
-        
+        <Image Source="/Images/Background.png" Stretch="Fill"/>
+        <TextBlock FontFamily="Inter" FontSize="23" TextAlignment="Center" Text="Приветствуем! Давайте подключим оборудование, следуйте инструкциям на экране." Margin="0,45,0,328"></TextBlock>
+        <Image Margin="10,10,715,397" Source="/Images/logo.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
     </Grid>
 </Window>
