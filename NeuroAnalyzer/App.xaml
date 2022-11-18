@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:NeuroAnalyzer"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary Source="MainTheme.xaml"/>
     </Application.Resources>
 </Application>
