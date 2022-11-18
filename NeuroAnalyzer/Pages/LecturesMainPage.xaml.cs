@@ -43,5 +43,10 @@ namespace NeuroAnalyzer
         {
             NavigationService.Navigate(new MainPage());
         }
+
+        private void ToBook1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new BookPage());
+        }
     }
 }
