@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="Resources\**" />
+    <Page Remove="Resources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Images\Background.png" />
     <None Remove="Images\Good.png" />
     <None Remove="Images\GoodGreen.png" />
@@ -31,10 +38,6 @@
     <None Remove="Images\Video lecture1.png" />
     <None Remove="Images\Video lecture2.png" />
     <None Remove="Images\Video lecture3.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Resources\" />
   </ItemGroup>
 
   <ItemGroup>
