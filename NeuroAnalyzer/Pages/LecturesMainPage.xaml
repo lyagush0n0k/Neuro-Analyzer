@@ -1,79 +1,98 @@
 ﻿<Page x:Class="NeuroAnalyzer.LecturesMainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:NeuroAnalyzer"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       mc:Ignorable="d"
       Title="LecturesMainPage" d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <ScrollViewer>
             <Grid Margin="20,20,20,20" Height="672">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="200"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="200" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid>
-                    <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0"/>
-                    <TextBlock FontSize="30" Text="Видеолекции по психологии" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                    <TextBlock FontSize="30" Text="Видеолекции по психологии" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Foreground="White" />
                 </Grid>
                 <Grid Grid.Row="1" Margin="0,20,0,20">
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition Height="50"/>
+                        <RowDefinition />
+                        <RowDefinition Height="50" />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Image Source="/Images/Video lecture1.png"/>
-                    <Image Source="/Images/Video lecture2.png" Grid.Column="1"/>
-                    <Image Source="/Images/Video lecture3.png" Grid.Column="2"/>
+                    <Image Source="/Images/Video lecture1.png" />
+                    <Image Source="/Images/Video lecture2.png" Grid.Column="1" />
+                    <Image Source="/Images/Video lecture3.png" Grid.Column="2" />
 
-                    <Button Content="Смотреть" Grid.Row="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="FirstLectionButton_Click" Style="{DynamicResource RoundButton}"/>
-                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="SecondLectionButton_Click" Style="{DynamicResource RoundButton}"/>
-                    <Button Style="{DynamicResource RoundButton}" Content="Смотреть" Grid.Row="1" Grid.Column="2" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="ThirdLectionButton_Click" Padding="1,1,1,1"/>
+                    <Button Content="Смотреть" Grid.Row="1" Height="40" Width="200" Background="#FF2C99B0"
+                            BorderBrush="{x:Null}" Foreground="White" Click="FirstLectionButton_Click"
+                            Style="{DynamicResource RoundButton}" />
+                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="1" Height="40" Width="200"
+                            Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
+                            Click="SecondLectionButton_Click" Style="{DynamicResource RoundButton}" />
+                    <Button Style="{DynamicResource RoundButton}" Content="Смотреть" Grid.Row="1" Grid.Column="2"
+                            Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
+                            Click="ThirdLectionButton_Click" Padding="1,1,1,1" />
                 </Grid>
                 <Grid Grid.Row="2">
-                    <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0"/>
-                    <TextBlock FontSize="30" Text="Полезная литература" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                    <TextBlock FontSize="30" Text="Полезная литература" HorizontalAlignment="Center"
+                               VerticalAlignment="Center" Foreground="White" />
                 </Grid>
                 <Grid Grid.Row="3" Margin="0,0,0,10">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
-                            <Image x:Name="TEST" Width="135.5" Height="223" Source="/Images/Literature1.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="FirstBook_Click"/>
+                            <Image Width="135.5" Height="223" Source="/Images/Literature1.png" Stretch="Fill"
+                                   Margin="20,20,20,20" />
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                                    Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"
+                                    Click="FirstBook_Click" />
                         </StackPanel>
                         <StackPanel Grid.Column="1">
-                            <Image Width="135.5" Height="223" Source="/Images/Literature2.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="SecondBook_Click"/>
+                            <Image Width="135.5" Height="223" Source="/Images/Literature2.png" Stretch="Fill"
+                                   Margin="20,20,20,20" />
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                                    Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"
+                                    Click="SecondBook_Click" />
                         </StackPanel>
                         <StackPanel Grid.Column="2">
-                            <Image Width="135.5" Height="223" Source="/Images/Literature3.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"/>
+                            <Image Width="135.5" Height="223" Source="/Images/Literature3.png" Stretch="Fill"
+                                   Margin="20,20,20,20" />
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                                    Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" />
                         </StackPanel>
                         <StackPanel Grid.Column="3">
-                            <Image Width="135.5" Height="223" Source="/Images/Literature4.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="FourthBook_Click"/>
+                            <Image Width="135.5" Height="223" Source="/Images/Literature4.png" Stretch="Fill"
+                                   Margin="20,20,20,20" />
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                                    Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"
+                                    Click="FourthBook_Click" />
                         </StackPanel>
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="4">
-                    <Button x:Name="ReturnBtn" Style="{DynamicResource RoundButton}" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" FontSize="15" Content="Перейти к предыдущему разделу"  Click="ReturnBtn_Click" />
+                    <Button x:Name="ReturnBtn" Style="{DynamicResource RoundButton}" Background="#FF2C99B0"
+                            BorderBrush="{x:Null}" Foreground="White" FontSize="15"
+                            Content="Перейти к предыдущему разделу" Click="ReturnBtn_Click" />
                 </Grid>
             </Grid>
         </ScrollViewer>
-        <Frame x:Name="MainFrame"/>
     </Grid>
 </Page>

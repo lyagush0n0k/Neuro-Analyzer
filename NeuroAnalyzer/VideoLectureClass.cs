@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NeuroAnalyzer
+﻿namespace NeuroAnalyzer
 {
     public class VideoLectureClass
     {
-        public string URL;
-        public string Title;
         public string? Description;
+        public string Title;
+        public string URL;
 
         public VideoLectureClass(string uRL, string title, string? description)
         {
@@ -18,6 +12,9 @@ namespace NeuroAnalyzer
             Title = title;
             Description = description;
         }
-        public VideoLectureClass() { }
+
+        public VideoLectureClass()
+        {
+        }
     }
 }

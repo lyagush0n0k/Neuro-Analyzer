@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,12 +8,12 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для GraphPage.xaml
+    ///     Логика взаимодействия для GraphPage.xaml
     /// </summary>
     public partial class GraphPage : Page
     {
-        private Timer graphUpdateTimer;
         private double _graphWidth, _graphHeight;
+        private Timer graphUpdateTimer;
 
         public GraphPage()
         {
@@ -49,19 +48,17 @@ namespace NeuroAnalyzer.Pages
                 SpectrumGrid.Children.Add(graphBounds);
 
                 int[] spectrumData = SerialInterfaceClass.GetSpectrumData();
-                for (int i = 0; i < 32; i++)
-                {
-                    stackPanel.Children.Add(new Rectangle()
+                for (var i = 0; i < 32; i++)
+                    stackPanel.Children.Add(new Rectangle
                     {
                         Width = _graphWidth / 32,
-                        Margin = new Thickness(0,0,0,1),
+                        Margin = new Thickness(0, 0, 0, 1),
                         Height = Math.Min(spectrumData[i], _graphHeight),
                         Fill = Brushes.Aquamarine,
                         StrokeThickness = 0,
                         VerticalAlignment = VerticalAlignment.Bottom,
                         HorizontalAlignment = HorizontalAlignment.Center
                     });
-                }
                 SpectrumGrid.Children.Add(stackPanel);
             });
         }
