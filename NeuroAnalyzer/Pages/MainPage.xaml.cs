@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NeuroAnalyzer.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,16 @@ namespace NeuroAnalyzer
         private void Button_Neiro_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Instuction_manual1());
+        }
+
+        private void ToSettings_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new SettingsPage());
+        }
+
+        private void ToPsycho_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PsychoTest());
         }
     }
 }

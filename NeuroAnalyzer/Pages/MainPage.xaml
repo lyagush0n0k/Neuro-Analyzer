@@ -35,7 +35,7 @@
                     <TextBlock Text="Лекции по психолгии" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
                 </Grid>
             </Button>
-            <Button Grid.Column="2" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}">
+            <Button Grid.Column="2" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}" Click="ToPsycho_Click">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Psychological testing.jpg" AlignmentX="Center"/>
                 </Button.Background>
@@ -46,7 +46,7 @@
         </Grid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,20,0" Height="50">
-            <Button Width="50" BorderBrush="{x:Null}">
+            <Button Width="50" BorderBrush="{x:Null}" Click="ToSettings_Click"> 
                 <Button.Background>
                     <ImageBrush ImageSource="/Images/Settings.png"/>
                 </Button.Background>
