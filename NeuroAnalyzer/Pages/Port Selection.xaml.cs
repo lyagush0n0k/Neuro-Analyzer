@@ -16,21 +16,21 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Логика взаимодействия для Instuction_manual1.xaml
+    /// Логика взаимодействия для Port_Selection.xaml
     /// </summary>
-    public partial class Instuction_manual1 : Page
+    public partial class Port_Selection : Page
     {
-        public Instuction_manual1()
+        public Port_Selection()
         {
             InitializeComponent();
         }
-        private void Button_Start_Click(object sender, RoutedEventArgs e)
+        private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Port_Selection());
+            NavigationService.Navigate(new Insruction_manual2());
         }
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new MainPage());
+            NavigationService.Navigate(new Instuction_manual1());
         }
     }
 }
