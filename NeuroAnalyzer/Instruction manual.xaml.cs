@@ -22,6 +22,12 @@ namespace NeuroAnalyzer
         public Instruction_manual()
         {
             InitializeComponent();
+            Hello.Text = "Приветствуем!\r\nДавайте подключим оборудование, следуйте инструкциям на экране.";
+        }
+
+        private void Button_Start_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
