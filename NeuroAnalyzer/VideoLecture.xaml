@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel>
-            <wpf:ChromiumWebBrowser x:Name="Browser" Address="https://www.youtube.com/embed/Elvt-w_TKSU" Height="295" Margin="0,0,0,5"/>
+            <wpf:ChromiumWebBrowser x:Name="Browser" Address="http://ipkfp.nspu.ru/file.php/1/Rogov_E.I._-_Nastolnaja_kniga_prakticheskogo_psikhologa_1.pdf" Height="295" Margin="0,0,0,5"/>
             <Grid>
                 <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30"/>
                 <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>

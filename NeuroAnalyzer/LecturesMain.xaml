@@ -36,13 +36,13 @@
                     <Image Source="/Images/Video lecture2.png" Grid.Column="1"/>
                     <Image Source="/Images/Video lecture3.png" Grid.Column="2"/>
 
-                    <Button Content="Смотреть" Grid.Row="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click"/>
-                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"/>
-                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="2" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"/>
+                    <Button Content="Смотреть" Grid.Row="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="FirstLectionButton_Click"/>
+                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="1" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="SecondLectionButton_Click"/>
+                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="2" Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Click="ThirdLectionButton_Click"/>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0"/>
-                    <TextBlock FontSize="30" Text="Видеолекции по психологии" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <TextBlock FontSize="30" Text="Полезная литература" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
                 </Grid>
                 <Grid Grid.Row="3">
                     <Grid.RowDefinitions>
