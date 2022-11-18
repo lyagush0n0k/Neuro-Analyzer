@@ -12,10 +12,10 @@
         <GroupBox x:Name="Answer1">
             <StackPanel Height="152" >
                 <Label Content="Чаще всего я предпочитаю скрывать свои истинные чувства от других людей" Height="64" Width="786" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20px" Margin="0 0 0 20"/>
-                <RadioButton Content="Да" Width="268" Margin="0 0 0 20"  />
-                <RadioButton Content="Нет" Width="268" Margin="0 0 0 20"/>
-                <Button Content="Далее"></Button>
+                <RadioButton x:Name="Yes"  Content="Да" Width="268" Margin="0 0 0 20"/>
+                <RadioButton x:Name="No" Content="Нет" Width="268" Margin="0 0 0 20"/>
             </StackPanel>
         </GroupBox>
+        <Button Content="Далее" Foreground="White" FontSize="30" Style="{DynamicResource RoundButton}" Height="50" Background="#FF2C99B0" BorderBrush="{x:Null}" Margin="307,307,307,93" Click="Next_Click" ></Button>
     </Grid>
 </Page>

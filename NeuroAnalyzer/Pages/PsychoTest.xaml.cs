@@ -24,5 +24,10 @@ namespace NeuroAnalyzer.Pages
         {
             InitializeComponent();
         }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
