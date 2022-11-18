@@ -16,19 +16,14 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Логика взаимодействия для Instruction_manual.xaml
+    /// Логика взаимодействия для Instuction_manual1.xaml
     /// </summary>
-    public partial class Instruction_manual
+    public partial class Instuction_manual1 : Page
     {
-        public Instruction_manual()
+        public Instuction_manual1()
         {
             InitializeComponent();
-            double screenHeight = SystemParameters.FullPrimaryScreenHeight;
-            double screenWidth = SystemParameters.FullPrimaryScreenWidth;
-            this.Top = (screenHeight - this.Height) / 0x00000002;
-            this.Left = (screenWidth - this.Width) / 0x00000002;
         }
-
         private void Button_Start_Click(object sender, RoutedEventArgs e)
         {
             InstuctionFrame.Navigate(new Insruction_manual2());

@@ -19,7 +19,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Width="200" FontSize="24" Foreground="White" BorderBrush="{x:Null}">
+            <Button Click="Button_Neiro_Click" Grid.Column="0" Width="200" FontSize="24" Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg"/>
                 </Button.Background>
