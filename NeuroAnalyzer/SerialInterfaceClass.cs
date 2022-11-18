@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
 using System.Threading;
+using System.Windows;
 
 namespace NeuroAnalyzer
 {
@@ -26,6 +27,7 @@ namespace NeuroAnalyzer
         public static void SetPort(String port)
         {
             _port.PortName = port;
+            _port.BaudRate = 115200;
         }
 
         public static void StartReading()
@@ -71,10 +73,8 @@ namespace NeuroAnalyzer
                             {
                                 l = _port.ReadByte();
                                 h = _port.ReadByte();
-                                _spectrumData[i] = (h << 8) << l;
+                                _spectrumData[i] = (h << 8) | l;
                             }
-
-                            Console.WriteLine();
                             _port.DiscardInBuffer();
                         }
                     }

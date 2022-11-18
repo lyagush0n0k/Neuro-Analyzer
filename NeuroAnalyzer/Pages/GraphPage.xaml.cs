@@ -33,7 +33,7 @@ namespace NeuroAnalyzer.Pages
         {
             Dispatcher.Invoke(() =>
             {
-                StackPanel stackPanel = new StackPanel()
+                StackPanel stackPanel = new()
                 {
                     Orientation = Orientation.Horizontal
                 };
@@ -48,17 +48,18 @@ namespace NeuroAnalyzer.Pages
                 };
                 SpectrumGrid.Children.Add(graphBounds);
 
-                int[] spectrumData = new int[32]; //SerialInterfaceClass.GetSpectrumData();
+                int[] spectrumData = SerialInterfaceClass.GetSpectrumData();
                 for (int i = 0; i < 32; i++)
                 {
                     stackPanel.Children.Add(new Rectangle()
                     {
                         Width = _graphWidth / 32,
                         Margin = new Thickness(0,0,0,1),
-                        Height = i * 2, //spectrumData[i],
+                        Height = Math.Min(spectrumData[i], _graphHeight),
                         Fill = Brushes.Aquamarine,
                         StrokeThickness = 0,
-                        VerticalAlignment = VerticalAlignment.Bottom
+                        VerticalAlignment = VerticalAlignment.Bottom,
+                        HorizontalAlignment = HorizontalAlignment.Center
                     });
                 }
                 SpectrumGrid.Children.Add(stackPanel);

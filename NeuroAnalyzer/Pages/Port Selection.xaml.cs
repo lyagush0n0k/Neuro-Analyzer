@@ -27,6 +27,9 @@ namespace NeuroAnalyzer
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Insruction_manual2());
+            SerialInterfaceClass.Init();
+            SerialInterfaceClass.SetPort("COM4");
+            SerialInterfaceClass.StartReading();
         }
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
