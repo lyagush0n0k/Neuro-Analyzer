@@ -11,10 +11,11 @@
       Loaded="GraphLoaded"
       SizeChanged="GridSizeChanged">
 
-    <Grid Background="White">
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
+    <Grid>
         <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
-        <Grid Name="SpectrumGrid" Margin="10,10,10,10"/>
-        <Grid Name="GraphGrid" Margin="10,10,10,10"/>
+        <StackPanel x:Name="mainStack">
+            <Grid Name="SpectrumGrid" Margin="10,10,10,10"/>
+            <Grid Name="GraphGrid" Margin="10,10,10,10"/>
+        </StackPanel>
     </Grid>
 </Page>

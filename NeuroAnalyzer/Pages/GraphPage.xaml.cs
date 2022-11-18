@@ -19,6 +19,9 @@ namespace NeuroAnalyzer.Pages
         public GraphPage()
         {
             InitializeComponent();
+
+            SpectrumGrid.Height = mainStack.Height / 2;
+            GraphGrid.Height = mainStack.Height / 2;
         }
 
         private void GraphLoaded(object sender, RoutedEventArgs e)
@@ -51,6 +54,7 @@ namespace NeuroAnalyzer.Pages
                     stackPanel.Children.Add(new Rectangle()
                     {
                         Width = _graphWidth / 32,
+                        Margin = new Thickness(0,0,0,1),
                         Height = i * 2, //spectrumData[i],
                         Fill = Brushes.Aquamarine,
                         StrokeThickness = 0,

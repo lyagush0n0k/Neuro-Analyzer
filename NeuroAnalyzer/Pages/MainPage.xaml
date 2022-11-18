@@ -57,6 +57,5 @@
                 </Button.Background>
             </Button>
         </StackPanel>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Page>
