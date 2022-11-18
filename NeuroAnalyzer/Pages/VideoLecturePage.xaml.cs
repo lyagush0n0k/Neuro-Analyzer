@@ -20,9 +20,14 @@ namespace NeuroAnalyzer
     /// </summary>
     public partial class VideoLecturePage : Page
     {
-        public VideoLecturePage()
+        public VideoLecturePage(VideoLectureClass a)
         {
             InitializeComponent();
+
+            Browser.LoadUrlAsync(a.URL);
+            Name.Text = a.Title;
+            Description.Text = a.Description;
+            this.Title = a.Title;
         }
     }
 }

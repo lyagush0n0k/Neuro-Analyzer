@@ -23,7 +23,7 @@ namespace NeuroAnalyzer
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Content = new MainPage();
+            MainFrame.NavigationService.Navigate(new Uri("/Pages/MainPage.xaml", UriKind.Relative));
         }
     }
 }

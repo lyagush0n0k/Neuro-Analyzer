@@ -8,8 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="BookPage">
 
-    <Grid Background="White">
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
+    <Grid>
         <ScrollViewer>
             <Grid Margin="20,20,20,20">
                 <Grid.RowDefinitions>

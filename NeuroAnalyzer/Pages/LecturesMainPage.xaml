@@ -6,8 +6,7 @@
       xmlns:local="clr-namespace:NeuroAnalyzer"
       mc:Ignorable="d"
       Title="LecturesMainPage" Height="450" Width="800">
-    <Grid Background="white">
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
+    <Grid>
         <ScrollViewer>
             <Grid Margin="20,20,20,20" Height="672">
                 <Grid.RowDefinitions>
@@ -75,6 +74,6 @@
                 </Grid>
             </Grid>
         </ScrollViewer>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2"></Frame>
+        <Frame x:Name="MainFrame"/>
     </Grid>
 </Page>
