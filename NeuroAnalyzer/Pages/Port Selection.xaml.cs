@@ -11,13 +11,15 @@ namespace NeuroAnalyzer.Pages
         public PortSelection()
         {
             InitializeComponent();
+            port_ComboBox.ItemsSource = SerialInterfaceClass.GetAvailablePorts();
+            port_ComboBox.SelectedIndex = 0;
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new InstructionManual2());
             SerialInterfaceClass.Init();
-            SerialInterfaceClass.SetPort("COM4");
+            SerialInterfaceClass.SetPort(port_ComboBox.SelectedItem.ToString());
             SerialInterfaceClass.StartReading();
         }
 

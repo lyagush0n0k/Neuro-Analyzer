@@ -21,30 +21,35 @@
                                VerticalAlignment="Center" Foreground="White" />
                 </Grid>
                 <Grid Grid.Row="1" Margin="0,20,0,20">
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition Height="50" />
-                    </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Image Source="/Images/Video lecture1.png" />
-                    <Image Source="/Images/Video lecture2.png" Grid.Row="0" Grid.Column="1" />
-                    <Image Source="/Images/Video lecture3.png" Grid.Row="0" Grid.Column="2" />
-
-                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="0" Height="40" Width="200"
+                    <StackPanel>
+                        <Image Source="/Images/Video lecture1.png" Width="200"/>
+                        <Button Content="Смотреть" Grid.Row="1" Grid.Column="0" Height="40"
                             Background="#FF2C99B0"
-                            BorderBrush="{x:Null}" Foreground="White" Click="FirstLectionButton_Click"
+                            BorderBrush="{x:Null}" Margin="20,10,20,0" Foreground="White" Click="FirstLectionButton_Click"
                             Style="{DynamicResource RoundButton}" />
-                    <Button Content="Смотреть" Grid.Row="1" Grid.Column="1" Height="40" Width="200"
-                            Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
-                            Click="SecondLectionButton_Click" Style="{DynamicResource RoundButton}" />
-                    <Button Style="{DynamicResource RoundButton}" Content="Смотреть" Grid.Row="1" Grid.Column="2"
-                            Height="40" Width="200" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
-                            Click="ThirdLectionButton_Click" Padding="1,1,1,1" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="1">
+                        <Image Source="/Images/Video lecture2.png" Width="200"/>
+                        <Button Content="Смотреть" Grid.Row="1" Grid.Column="0" Height="40"
+                            Background="#FF2C99B0"
+                            BorderBrush="{x:Null}" Margin="20,10,20,0" Foreground="White" Click="SecondLectionButton_Click"
+                            Style="{DynamicResource RoundButton}" />
+                    </StackPanel>
+
+                    <StackPanel Grid.Column="2">
+                        <Image Source="/Images/Video lecture3.png" Width="200"/>
+                        <Button Content="Смотреть" Grid.Row="1" Grid.Column="0" Height="40"
+                            Background="#FF2C99B0"
+                            BorderBrush="{x:Null}" Margin="20,10,20,0" Foreground="White" Click="ThirdLectionButton_Click"
+                            Style="{DynamicResource RoundButton}" />
+                    </StackPanel>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />

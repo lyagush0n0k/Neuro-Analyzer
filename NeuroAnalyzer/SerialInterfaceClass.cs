@@ -8,9 +8,10 @@ namespace NeuroAnalyzer
     public static class SerialInterfaceClass
     {
         private static readonly SerialPort _port = new();
-        private static readonly Thread _serialThread = new(ReadData);
         private static readonly int[] _spectrumData = new int[32];
         private static readonly List<int> _graphData = new();
+        private static Thread _serialThread;
+        private static CancellationTokenSource tokenSource = new();
 
         public static void Init()
         {
@@ -28,9 +29,15 @@ namespace NeuroAnalyzer
             _port.BaudRate = 115200;
         }
 
+        public static bool IsOpen()
+        {
+            return _port.IsOpen;
+        }
+
         public static void StartReading()
         {
             _port.Open();
+            _serialThread = new(ReadData);
             _serialThread.Start();
         }
 
@@ -51,7 +58,7 @@ namespace NeuroAnalyzer
 
         private static void ReadData()
         {
-            while (true)
+            while (_port.IsOpen)
                 try
                 {
                     if (_port.BytesToRead <= 0) continue;

@@ -15,34 +15,40 @@
                     <ColumnDefinition Width="300" />
                 </Grid.ColumnDefinitions>
 
-                <StackPanel>
-                    <wpf:ChromiumWebBrowser x:Name="Browser"
-                                            Address="http://ipkfp.nspu.ru/file.php/1/Rogov_E.I._-_Nastolnaja_kniga_prakticheskogo_psikhologa_1.pdf"
-                                            Height="295" Margin="0,0,0,5" />
-                    <Grid>
-                        <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30" />
-                        <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?"
-                                   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" />
-                    </Grid>
-                    <Grid Margin="0,5,0,0">
-                        <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
-                        <TextBlock x:Name="Description"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1,5*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <wpf:ChromiumWebBrowser x:Name="Browser" Margin="0,0,0,5" />
+                    <StackPanel Grid.Row="1">
+                        <Grid>
+                            <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30" />
+                            <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" Margin="10,10,10,10"/>
+                        </Grid>
+                        <Grid Margin="0,5,0,0">
+                            <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                            <TextBlock x:Name="Description"
                                    Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время."
-                                   TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" />
-                    </Grid>
+                                   TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
 
-                </StackPanel>
                 <StackPanel Margin="20,0,0,0" Grid.Column="1">
                     <Grid>
-                        <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30" />
-                        <TextBlock Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center"
+                        <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                        <TextBlock Margin="10,10,10,10" Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center"
                                    Foreground="White" HorizontalAlignment="Center" />
                     </Grid>
                     <Image Margin="0,10,0,0" Source="/Images/Video lecture2.png" Stretch="Fill" />
                     <Image Margin="0,10,0,0" Source="/Images/Video lecture3.png" Stretch="Fill" />
                     <Button Margin="0,10,0,0" x:Name="ReturnBtn" Style="{DynamicResource RoundButton}"
                             Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" FontSize="15"
-                            Content="Перейти к предыдущему разделу" Click="ReturnBtn_Click" Height="30" />
+                            Click="ReturnBtn_Click">
+                        <TextBlock Margin="10,10,10,10" Text="Перейти к предыдущему разделу"/>
+                    </Button>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

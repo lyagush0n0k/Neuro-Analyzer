@@ -17,5 +17,10 @@ namespace NeuroAnalyzer.Pages
         {
             NavigationService.Navigate(new GraphPage());
         }
+
+        private void Button_Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainPage());
+        }
     }
 }

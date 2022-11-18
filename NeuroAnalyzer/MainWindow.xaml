@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Neuro Analyzer" Height="450" Width="800" Closing="Window_Closing"
+        d:MinHeight="450" d:MinWidth="800"
         ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Image Source="/Images/Background.png" Stretch="Fill" />

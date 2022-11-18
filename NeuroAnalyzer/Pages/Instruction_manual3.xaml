@@ -7,19 +7,46 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Instruction_manual3">
 
-    <Grid Background="White">
-        <Image Source="/Images/Background.png" Stretch="Fill" />
-        <Image Margin="0 0 700 380" Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill" />
-        <Button Click="Button_Back_Click" Margin="0 360 400 0" Content="Назад" FontSize="20" Height="40" Width="200"
-                Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource RoundButton}" />
-        <Button Click="Button_Next_Click" Margin="400 360 0 0" Content="Далее" FontSize="20" Height="40" Width="200"
-                Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource RoundButton}" />
-        <TextBlock Margin="0,70,0,285" TextWrapping="Wrap" TextAlignment="Center" FontSize="20">
-            <Run Text="Опорный электрод с синей головкой прикрепите над костью черепа за ухом." />
-        </TextBlock>
-        <Image Margin="30,170,447,98" Source="/Images/Instruction manual3.png" Stretch="Fill" />
-        <Image Margin="442,170,30,95" Source="/Images/Instruction manual4.png" Stretch="Fill" />
-        <Image Source="/Images/Arrow.png" Stretch="Fill" StretchDirection="Both" Width="89" Height="24"
-               HorizontalAlignment="Left" VerticalAlignment="Top" Margin="353,250,0,0" />
+    <Grid Margin="20,20,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill" HorizontalAlignment="Left" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="89"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.ColumnSpan="3" TextWrapping="Wrap" TextAlignment="Center" FontSize="20">
+                <Run Text="Опорный электрод с синей головкой прикрепите над костью черепа за ухом."/>
+            </TextBlock>
+
+            <Image Grid.Row="1" Margin="20,20,0,20" Source="/Images/Instruction manual3.png" HorizontalAlignment="Right"/>
+            <Image Grid.Row="1" Grid.Column="1" Source="/Images/Arrow.png" Width="89" Height="24"/>
+            <Image Grid.Row="1" Grid.Column="2" Margin="0,20,20,20" Source="/Images/Instruction manual4.png" HorizontalAlignment="Left"/>
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Click="Button_Back_Click" Content="Назад" FontSize="20" Height="40" Width="200"
+                Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource RoundButton}"/>
+            <Button Grid.Column="1" Click="Button_Next_Click" Content="Далее" FontSize="20" Height="40" Width="200"
+                Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Style="{DynamicResource RoundButton}"/>
+        </Grid>
     </Grid>
 </Page>

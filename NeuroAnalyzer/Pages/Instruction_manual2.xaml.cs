@@ -20,6 +20,7 @@ namespace NeuroAnalyzer.Pages
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
+            SerialInterfaceClass.StopReading();
             NavigationService.Navigate(new InstructionManual1());
         }
     }

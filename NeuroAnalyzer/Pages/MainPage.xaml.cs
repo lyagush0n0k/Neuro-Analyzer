@@ -11,6 +11,11 @@ namespace NeuroAnalyzer.Pages
         public MainPage()
         {
             InitializeComponent();
+
+            if(SerialInterfaceClass.IsOpen())
+            {
+                SerialInterfaceClass.StopReading();
+            }
         }
 
         private void LectureButton_Click(object sender, RoutedEventArgs e)

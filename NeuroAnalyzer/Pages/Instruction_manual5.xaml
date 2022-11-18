@@ -7,14 +7,32 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Instruction_manual5">
 
-    <Grid Background="White">
-        <Image Source="/Images/Background.png" Stretch="Fill" />
-        <Image Margin="0 0 700 380" Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill" />
-        <Button Click="Button_Next_Click" Margin="0 330 0 0" Content="Начать тестирование" FontSize="20" Height="40"
-                Width="250" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
-                Style="{DynamicResource RoundButton}" />
-        <TextBlock Margin="0,80,0,285" TextWrapping="Wrap" TextAlignment="Center" FontSize="25">
+    <Grid Margin="20,20,20,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill" HorizontalAlignment="Left" />
+        
+        <TextBlock Grid.Row="1" TextWrapping="Wrap" TextAlignment="Center" FontSize="25" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Run Text="Сосредоточьтесь, расслабтесь, закройте глаза." />
         </TextBlock>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Назад" FontSize="20" Height="40" Width="200" Background="#FF2C99B0"
+                BorderBrush="{x:Null}" Foreground="White" Click="Button_Back_Click"
+                Style="{DynamicResource RoundButton}" />
+
+            <Button Grid.Column="1" Click="Button_Next_Click" Content="Начать тестирование" FontSize="20" Height="40"
+                Width="250" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White"
+                Style="{DynamicResource RoundButton}" />
+        </Grid>
     </Grid>
 </Page>
