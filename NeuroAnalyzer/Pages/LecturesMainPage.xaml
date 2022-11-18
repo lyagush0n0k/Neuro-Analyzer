@@ -52,12 +52,12 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <StackPanel Grid.Column="0">
-                            <Image Width="135.5" Height="223" Source="/Images/Literature1.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="ToBook1_Click"/>
+                            <Image x:Name="TEST" Width="135.5" Height="223" Source="/Images/Literature1.png" Stretch="Fill" Margin="20,20,20,20"/>
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="FirstBook_Click"/>
                         </StackPanel>
                         <StackPanel Grid.Column="1">
                             <Image Width="135.5" Height="223" Source="/Images/Literature2.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"/>
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="SecondBook_Click"/>
                         </StackPanel>
                         <StackPanel Grid.Column="2">
                             <Image Width="135.5" Height="223" Source="/Images/Literature3.png" Stretch="Fill" Margin="20,20,20,20"/>
@@ -65,7 +65,7 @@
                         </StackPanel>
                         <StackPanel Grid.Column="3">
                             <Image Width="135.5" Height="223" Source="/Images/Literature4.png" Stretch="Fill" Margin="20,20,20,20"/>
-                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}"/>
+                            <Button Content="Смотреть" Height="40" Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" Margin="20,0,20,0" Style="{DynamicResource RoundButton}" Click="FourthBook_Click"/>
                         </StackPanel>
                     </Grid>
                 </Grid>
