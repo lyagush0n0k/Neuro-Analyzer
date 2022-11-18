@@ -27,7 +27,7 @@ namespace NeuroAnalyzer
         }
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            InstuctionFrame2.Navigate(new GraphPage());
+            NavigationService.Navigate(new GraphPage());
         }
     }
 }
