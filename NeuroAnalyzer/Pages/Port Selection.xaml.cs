@@ -16,23 +16,24 @@ using System.Windows.Shapes;
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Логика взаимодействия для Instruction_manual3.xaml
+    /// Логика взаимодействия для Port_Selection.xaml
     /// </summary>
-    public partial class Instruction_manual3 : Page
+    public partial class Port_Selection : Page
     {
-        public Instruction_manual3()
+        public Port_Selection()
         {
             InitializeComponent();
         }
-
-        private void Button_Back_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new Insruction_manual2());
-        }
-
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Instriction_manual4());
+            NavigationService.Navigate(new Insruction_manual2());
+            SerialInterfaceClass.Init();
+            SerialInterfaceClass.SetPort("COM4");
+            SerialInterfaceClass.StartReading();
+        }
+        private void Button_Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Instuction_manual1());
         }
     }
 }

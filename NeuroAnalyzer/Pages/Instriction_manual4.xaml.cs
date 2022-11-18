@@ -26,12 +26,12 @@ namespace NeuroAnalyzer
         }
         private void Button_Back_Click(object sender, RoutedEventArgs e)
         {
-            InstuctionFrame2.Navigate(new Instruction_manual3());
+            NavigationService.Navigate(new Instruction_manual3());
         }
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            InstuctionFrame2.Navigate(new Instuction_manual5());
+            NavigationService.Navigate(new Instuction_manual5());
         }
     }
 }

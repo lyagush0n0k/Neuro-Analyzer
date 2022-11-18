@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NeuroAnalyzer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing"
-        ResizeMode="CanResize" >
+        Title="Neuro Analyzer" Height="450" Width="800" Closing="Window_Closing"
+        ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"/>
+        <Image Source="/Images/Background.png" Stretch="Fill"/>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

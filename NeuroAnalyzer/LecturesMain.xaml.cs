@@ -37,12 +37,6 @@ namespace NeuroAnalyzer
                 "Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью.\n" +
                 "Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время."
                 );
-
-            book1 = new BookInfo(
-                "captive.apple.com",
-                new Uri(@"/Images/Literature1.png", UriKind.RelativeOrAbsolute),
-                "");
-
         }
 
         private void FirstLectionButton_Click(object sender, RoutedEventArgs e)

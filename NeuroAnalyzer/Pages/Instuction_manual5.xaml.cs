@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NeuroAnalyzer.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace NeuroAnalyzer
         }
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new GraphPage());
         }
     }
 }
