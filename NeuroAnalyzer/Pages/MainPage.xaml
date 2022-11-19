@@ -24,7 +24,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg" />
                 </Button.Background>
                 <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=NeuroButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=NeuroButton, Mode=OneWay}">
-                    <TextBlock Text="Нейро тестирование" TextWrapping="Wrap" VerticalAlignment="Center"
+                    <TextBlock Text="Нейродиагностика" TextWrapping="Wrap" VerticalAlignment="Center"
                                TextAlignment="Center" />
                 </Grid>
             </Button>
@@ -34,7 +34,7 @@
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Lectures on psychology.jpg" />
                 </Button.Background>
                 <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=LecturesButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=LecturesButton, Mode=OneWay}">
-                    <TextBlock Text="Лекции по психолгии" TextWrapping="Wrap" VerticalAlignment="Center"
+                    <TextBlock Text="Полезные материалы" TextWrapping="Wrap" VerticalAlignment="Center"
                                TextAlignment="Center" />
                 </Grid>
             </Button>
