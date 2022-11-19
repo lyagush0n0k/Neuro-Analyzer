@@ -30,9 +30,9 @@ namespace NeuroAnalyzer.Pages
             NavigationService.Navigate(new MainPage());
         }
 
-        private void Button_Start_Click(object sender, RoutedEventArgs e)
+        private void InfoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new GraphPage());
         }
     }
 }

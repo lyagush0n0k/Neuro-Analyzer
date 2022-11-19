@@ -51,7 +51,7 @@
                 BorderBrush="{x:Null}" Foreground="White" Click="Button_Back_Click"
                 Style="{DynamicResource RoundButton}" />
             <Button Grid.Column="1" Content="Подробнее" FontSize="20" Height="40" Width="200" Background="#FF2C99B0"
-                BorderBrush="{x:Null}" Foreground="White" Click="Button_Start_Click"
+                BorderBrush="{x:Null}" Foreground="White" Click="InfoButton_Click"
                 Style="{DynamicResource RoundButton}" />
         </Grid>
     </Grid>

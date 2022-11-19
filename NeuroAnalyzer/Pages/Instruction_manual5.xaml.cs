@@ -15,7 +15,7 @@ namespace NeuroAnalyzer.Pages
 
         private void Button_Next_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new GraphPage());
+            NavigationService.Navigate(new PsyhoPage());
         }
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)

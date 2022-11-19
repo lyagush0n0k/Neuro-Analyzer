@@ -73,8 +73,6 @@ namespace NeuroAnalyzer.Pages
                 SpectrumGrid.Children.Clear();
                 Rectangle graphBounds = new()
                 {
-                    Width = _graphWidth,
-                    Height = _graphHeight,
                     StrokeThickness = 1,
                     Stroke = Brushes.Black
                 };
