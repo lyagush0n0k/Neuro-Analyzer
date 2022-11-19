@@ -47,7 +47,7 @@ namespace NeuroAnalyzer.Pages
             {
                 while (true)
                 {
-                    Thread.Sleep(10);
+                    Thread.Sleep(2);
                     
                     int[] spectrumData = SerialInterfaceClass.GetSpectrumData();
 
@@ -66,7 +66,7 @@ namespace NeuroAnalyzer.Pages
 
                     int sum = 0;
                     for(int i = 5; i < 10; i++) sum += spectrumData[i];
-                    sum *= 2;
+                    sum *= 3;
                     alphaLevel = 0.03*sum + 0.97*alphaLevel;
                     
                     Values2.Add(alphaLevel);

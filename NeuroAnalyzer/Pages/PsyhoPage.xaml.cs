@@ -26,7 +26,7 @@ namespace NeuroAnalyzer.Pages
         {
             InitializeComponent();
         }
-        
+
         private void PsycoLoaded(object sender, RoutedEventArgs e)
         {
             Task.Run(() =>
@@ -37,21 +37,32 @@ namespace NeuroAnalyzer.Pages
                 int num_samples = 0;
                 while (sw.ElapsedMilliseconds < 20000)
                 {
-                    Dispatcher.Invoke(() =>
-                    {
-                        PsyhoProgress.Value = sw.ElapsedMilliseconds;
-                    });
+                    Dispatcher.Invoke(() => { PsyhoProgress.Value = sw.ElapsedMilliseconds; });
                     int[] spectrum = SerialInterfaceClass.GetSpectrumData();
                     int thisAlpha = 0;
                     for (int i = 5; i < 10; i++) thisAlpha += spectrum[i];
                     alphaLevel += thisAlpha;
                     num_samples++;
+                    /*Dispatcher.Invoke(() =>
+                    {
+                        PsyhoText.Text = thisAlpha.ToString();
+                    });*/
                 }
 
                 alphaLevel /= num_samples;
-                MessageBox.Show(alphaLevel.ToString());
+                //MessageBox.Show(alphaLevel.ToString());
+                Dispatcher.Invoke(() =>
+                {
+                    if (alphaLevel > 60)
+                    {
+                        GoodImage.Source = new BitmapImage(new Uri("/Images/GoodGreen.png", UriKind.RelativeOrAbsolute));
+                    }
+                    else
+                    {
+                        BadImage.Source = new BitmapImage(new Uri("/Images/UnsatisfactoryRed.png", UriKind.RelativeOrAbsolute));
+                    }
+                });
             });
-
         }
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)
