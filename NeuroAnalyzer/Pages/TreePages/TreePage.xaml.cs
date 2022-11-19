@@ -15,7 +15,7 @@ namespace NeuroAnalyzer.Pages.TreePages
 
         private void Button_Start_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new TreePageGame());
         }
     }
 }

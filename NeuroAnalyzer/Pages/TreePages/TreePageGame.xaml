@@ -27,9 +27,9 @@
             <Image Source="/Images/Trees/Tree1.png"/>
 
             <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock Text="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"/>
-                <ProgressBar MinWidth="500" Height="20" Value="45"/>
-                <TextBlock Text="100" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                <TextBlock x:Name="TreeTimerText" Text="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"/>
+                <ProgressBar x:Name="TreeProgressBar" MinWidth="500" Height="20" Value="45"/>
+                <TextBlock x:Name="TreePrograssText" Text="100" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </StackPanel>
             
 

@@ -19,8 +19,8 @@
         <Grid Grid.Row="1">
             <StackPanel Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <TextBlock FontSize="20" Text="Результаты:" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,20,0,0"/>
-                <TextBlock FontSize="20" Text="Вы вырастили дерево на X процентов." VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,20,0,0"/>
-                <TextBlock FontSize="20" Text="Вы затратили на это Y секунд/минут." VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+                <TextBlock x:Name="TreePercentText" FontSize="20" Text="Вы вырастили дерево на X процентов." VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,20,0,0"/>
+                <TextBlock x:Name="TreeSecondsText" FontSize="20" Text="Вы затратили на это Y секунд/минут." VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,20,0,0"/>
             </StackPanel>
         </Grid>
 

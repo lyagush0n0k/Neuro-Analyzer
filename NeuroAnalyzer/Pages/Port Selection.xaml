@@ -20,11 +20,17 @@
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
                 <TextBlock FontSize="25" Text="Порт: "/>
                 <ComboBox x:Name="port_ComboBox" Width="200" Height="25"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Orientation="Horizontal">
+                <Button Content="Обновить" FontSize="20" Height="40" Width="200" Background="#FF2C99B0"
+                BorderBrush="{x:Null}" Foreground="White" Click="UpdateButton_Click"
+                Style="{DynamicResource RoundButton}"/>
             </StackPanel>
         </Grid>
         <Grid Grid.Row="2">
