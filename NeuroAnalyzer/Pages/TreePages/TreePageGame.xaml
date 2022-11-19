@@ -16,7 +16,6 @@
         </Grid.RowDefinitions>
         
         <Image Source="/Images/logo.png" Height="25" Width="80" Stretch="Fill" HorizontalAlignment="Left" />
-        <TextBlock Text="ДЛЯ ТАЙМЕРА" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -24,15 +23,11 @@
                 <RowDefinition Height="40"/>
             </Grid.RowDefinitions>
 
-            <Image Source="/Images/Trees/Tree1.png"/>
+            <Image Margin="30" Source="/Images/Trees/Tree.png"/>
 
             <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock x:Name="TreeTimerText" Text="0" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"/>
                 <ProgressBar x:Name="TreeProgressBar" MinWidth="500" Height="20" Value="45"/>
-                <TextBlock x:Name="TreePrograssText" Text="100" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </StackPanel>
-            
-
         </Grid>
 
         <Button Grid.Row="2" Content="Отмена" FontSize="20" Height="40" Width="200" Background="#FF2C99B0"
