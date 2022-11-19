@@ -19,6 +19,9 @@
                 <Button x:Name="ToNext_btn" Content="Далее" Foreground="White" FontSize="30"
                         Style="{DynamicResource RoundButton}" Height="50" Background="#FF2C99B0" BorderBrush="{x:Null}"
                         Click="Next_Click" Width="400" />
+                <Button x:Name="Rtn_Btn" Content="Вернуться к выбору разделов" Foreground="White" FontSize="15" Visibility="Hidden"
+                        Style="{DynamicResource RoundButton}" Height="30" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                        Click="Rtn_Btn_Click" Width="400" />
             </StackPanel>
         </GroupBox>
     </Grid>

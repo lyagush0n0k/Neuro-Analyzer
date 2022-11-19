@@ -29,6 +29,11 @@ namespace NeuroAnalyzer.Pages
             InitializeComponent();
         }
 
+        private void Rtn_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new MainPage());
+        }
+
         private void Next_Click(object sender, RoutedEventArgs e)
         {
             if (i != questions.Length) question.Text = questions[i];
@@ -41,6 +46,7 @@ namespace NeuroAnalyzer.Pages
             Yes.Visibility = Visibility.Hidden;
             No.Visibility = Visibility.Hidden;
             ToNext_btn.Visibility = Visibility.Hidden;
+            Rtn_Btn.Visibility = Visibility.Visible;
             if (sum <= 2)
                 question.Text =
                     "Ваша психологическая устойчивость гораздо ниже среднего, поэтому вы зависимы от мнения других людей. Вы не можете спокойно воспринимать чужой успех, потому что не верите в свой. Вы сомневаетесь в добрых намерениях других и думаете, что люди с радостью сделали бы вам гадость, если бы у них появилась такая возможность.";
