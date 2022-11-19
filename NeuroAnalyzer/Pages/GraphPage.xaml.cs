@@ -25,9 +25,6 @@ namespace NeuroAnalyzer.Pages
         public GraphPage()
         {
             InitializeComponent();
-
-            SpectrumGrid.Height = mainStack.Height / 2;
-            GraphGrid.Height = mainStack.Height / 2;
             
             var mapper = Mappers.Xy<MeasureModel>()
                 .X(x => x.ElapsedMilliseconds)
@@ -78,7 +75,6 @@ namespace NeuroAnalyzer.Pages
                 {
                     Width = _graphWidth,
                     Height = _graphHeight,
-                    Fill = Brushes.White,
                     StrokeThickness = 1,
                     Stroke = Brushes.Black
                 };

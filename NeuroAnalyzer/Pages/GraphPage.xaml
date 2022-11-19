@@ -11,39 +11,42 @@
     Loaded="GraphLoaded"
     SizeChanged="GridSizeChanged">
 
-    <Grid>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
-        <StackPanel x:Name="mainStack">
-            <Grid Name="SpectrumGrid" Margin="10,10,10,10"/>
-            <Grid Name="GraphGrid" Margin="10,10,10,10" >
-                <wpf:CartesianChart DisableAnimations="True" Hoverable="True" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
-                    <wpf:CartesianChart.Series>
-                        <wpf:LineSeries Values="{Binding Values}"
+    <Grid Margin="20" >
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Name="SpectrumGrid" Width="{Binding ActualWidth, ElementName=mainStack, Mode=OneWay}"/>
+        <Grid Grid.Row="1" Name="GraphGrid">
+            <wpf:CartesianChart DisableAnimations="True" Hoverable="True" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
+                <wpf:CartesianChart.Series>
+                    <wpf:LineSeries Values="{Binding Values}"
                                         PointGeometry="{x:Null}"
                                         LineSmoothness="1"
                                         StrokeThickness="1"
                                         Stroke="#F34336"
 
                                         Fill="Transparent" />
-                    </wpf:CartesianChart.Series>
-                    <wpf:CartesianChart.AxisX>
-                        <wpf:Axis
+                </wpf:CartesianChart.Series>
+                <wpf:CartesianChart.AxisX>
+                    <wpf:Axis
                             Unit="100" >
-                            <wpf:Axis.Separator>
-                                <wpf:Separator Step="100" />
-                            </wpf:Axis.Separator>
-                        </wpf:Axis>
-                    </wpf:CartesianChart.AxisX>
-                    <wpf:CartesianChart.AxisY>
-                        <wpf:Axis
+                        <wpf:Axis.Separator>
+                            <wpf:Separator Step="100" />
+                        </wpf:Axis.Separator>
+                    </wpf:Axis>
+                </wpf:CartesianChart.AxisX>
+                <wpf:CartesianChart.AxisY>
+                    <wpf:Axis
                             Unit="1" MinValue="-512" MaxValue="512" >
-                            <wpf:Axis.Separator>
-                                <wpf:Separator Step="100" />
-                            </wpf:Axis.Separator>
-                        </wpf:Axis>
-                    </wpf:CartesianChart.AxisY>
-                </wpf:CartesianChart>
-            </Grid>
-        </StackPanel>
+                        <wpf:Axis.Separator>
+                            <wpf:Separator Step="100" />
+                        </wpf:Axis.Separator>
+                    </wpf:Axis>
+                </wpf:CartesianChart.AxisY>
+            </wpf:CartesianChart>
+        </Grid>
+        
     </Grid>
 </Page>
