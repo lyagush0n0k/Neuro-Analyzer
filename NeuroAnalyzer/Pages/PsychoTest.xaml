@@ -7,22 +7,52 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PsychoTest">
 
-    <Grid Background="White">
-        <GroupBox x:Name="Answer1">
-            <StackPanel Height="411">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <Grid Margin="5">
+                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Margin="0,1,0,-1"/>
                 <TextBlock x:Name="question"
-                           Text="Чаще всего я предпочитаю скрывать свои истинные чувства от других людей" Height="180"
-                           Width="668" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"
-                           FontSize="20px" Margin="0 0 0 20" />
-                <RadioButton x:Name="Yes" Content="Да" Width="268" Margin="0 0 0 20" />
-                <RadioButton x:Name="No" Content="Нет" Width="268" Margin="0 0 0 20" />
-                <Button x:Name="ToNext_btn" Content="Далее" Foreground="White" FontSize="30"
-                        Style="{DynamicResource RoundButton}" Height="50" Background="#FF2C99B0" BorderBrush="{x:Null}"
-                        Click="Next_Click" Width="400" />
-                <Button x:Name="Rtn_Btn" Content="Вернуться к выбору разделов" Foreground="White" FontSize="15" Visibility="Hidden"
+                                   Text="Чаще всего я предпочитаю скрывать свои истинные чувства от других людей"
+                                   TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" Margin="0,11,0,9" FontSize="20"/>
+            </Grid>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <Grid>
+                <GroupBox BorderBrush="{x:Null}">
+                    <StackPanel>
+                        <RadioButton x:Name="Yes" Content="Да" Width="80" Foreground="#FF2C628B" BorderBrush="#FF2C628B" BorderThickness="3" Background="White" IsChecked="True" RenderTransformOrigin="0.5,0.5">
+                            <RadioButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="5"/>
+                                </TransformGroup>
+                            </RadioButton.RenderTransform>
+                        </RadioButton>
+                        <RadioButton x:Name="No" Content="Нет" Width="80" Foreground="#FF2C628B" BorderBrush="#FF2C628B" BorderThickness="3" Background="White" RenderTransformOrigin="0.5,0.5" >
+                            <RadioButton.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform Y="15"/>
+                                </TransformGroup>
+                            </RadioButton.RenderTransform>
+                        </RadioButton>
+                        <Button x:Name="Rtn_Btn" Content="Вернуться к выбору разделов" Foreground="White" FontSize="15" Visibility="Hidden"
                         Style="{DynamicResource RoundButton}" Height="30" Background="#FF2C99B0" BorderBrush="{x:Null}"
                         Click="Rtn_Btn_Click" Width="400" />
-            </StackPanel>
-        </GroupBox>
+                        <Button x:Name="ToNext_btn" Content="Далее" Foreground="White" FontSize="30"
+                        Style="{DynamicResource RoundButton}" Height="50" Background="#FF2C99B0" BorderBrush="{x:Null}"
+                        Click="Next_Click" Width="400" />
+                    </StackPanel>
+                </GroupBox>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Page>
