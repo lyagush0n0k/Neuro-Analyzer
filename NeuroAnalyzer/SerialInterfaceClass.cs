@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Threading;
+using System.Windows;
 
 namespace NeuroAnalyzer
 {
@@ -10,6 +11,7 @@ namespace NeuroAnalyzer
         private static readonly SerialPort _port = new();
         private static readonly int[] _spectrumData = new int[32];
         private static readonly List<int> _graphData = new();
+        public static int graphPoint;
         private static Thread _serialThread;
         private static CancellationTokenSource tokenSource = new();
 
@@ -71,7 +73,8 @@ namespace NeuroAnalyzer
 
                     var l = _port.ReadByte();
                     var h = _port.ReadByte();
-                    _graphData.Add(((h << 8) | l) - 512);
+                    graphPoint = ((h << 8) | l) - 512;
+                    _graphData.Add(graphPoint);
                     _graphData.Remove(0);
                     for (var i = 0; i < 32; i++)
                     {
