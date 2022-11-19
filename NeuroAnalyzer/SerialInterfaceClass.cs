@@ -12,6 +12,8 @@ namespace NeuroAnalyzer
         private static readonly int[] _spectrumData = new int[32];
         private static readonly List<int> _graphData = new();
         public static int graphPoint;
+        public static int pulsePerMinte;
+        public static int pulseInstability;
         private static Thread _serialThread;
         private static CancellationTokenSource tokenSource = new();
 
@@ -73,6 +75,12 @@ namespace NeuroAnalyzer
 
                     var l = _port.ReadByte();
                     var h = _port.ReadByte();
+                    pulsePerMinte = ((h << 8) | l) - 512;
+                    l = _port.ReadByte();
+                    h = _port.ReadByte();
+                    pulseInstability = ((h << 8) | l) - 512;
+                    l = _port.ReadByte();
+                    h = _port.ReadByte();
                     graphPoint = ((h << 8) | l) - 512;
                     _graphData.Add(graphPoint);
                     _graphData.Remove(0);
