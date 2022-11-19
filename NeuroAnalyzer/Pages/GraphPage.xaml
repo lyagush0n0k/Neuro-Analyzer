@@ -4,11 +4,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
     mc:Ignorable="d" 
     d:DesignHeight="450" d:DesignWidth="800"
     Title="GraphPage"
-    Loaded="GraphLoaded"
     SizeChanged="GridSizeChanged">
 
     <Grid Margin="20" >
@@ -17,35 +16,50 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Grid Name="SpectrumGrid" Width="{Binding ActualWidth, ElementName=mainStack, Mode=OneWay}"/>
+        <!--<Grid Name="SpectrumGrid" Width="{Binding ActualWidth, ElementName=mainStack, Mode=OneWay}"/>-->
+        <lvc:CartesianChart DisableAnimations="True" Hoverable="False" DataTooltip="{x:Null}">
+            <lvc:CartesianChart.Series>
+                <lvc:ColumnSeries Values="{Binding Values1}"/>
+                <lvc:LineSeries Values="{Binding Values2}"
+                                PointGeometry="{x:Null}" LineSmoothness="1"
+                                StrokeThickness="1" Stroke="#F34336"
+                                Fill="Transparent" />
+            </lvc:CartesianChart.Series>
+            <lvc:CartesianChart.AxisY>
+            <lvc:Axis Unit="100" MinValue="0" MaxValue="512" >
+                <lvc:Axis.Separator>
+                    <lvc:Separator Step="100" />
+                </lvc:Axis.Separator>
+            </lvc:Axis>
+            </lvc:CartesianChart.AxisY>
+
+        </lvc:CartesianChart>
         <Grid Grid.Row="1" Name="GraphGrid">
-            <wpf:CartesianChart DisableAnimations="True" Hoverable="True" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
-                <wpf:CartesianChart.Series>
-                    <wpf:LineSeries Values="{Binding Values}"
+            <lvc:CartesianChart DisableAnimations="True" Hoverable="False" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
+                <lvc:CartesianChart.Series>
+                    <lvc:LineSeries Values="{Binding Values}"
                                         PointGeometry="{x:Null}"
                                         LineSmoothness="1"
                                         StrokeThickness="1"
                                         Stroke="#F34336"
 
                                         Fill="Transparent" />
-                </wpf:CartesianChart.Series>
-                <wpf:CartesianChart.AxisX>
-                    <wpf:Axis
-                            Unit="100" >
-                        <wpf:Axis.Separator>
-                            <wpf:Separator Step="100" />
-                        </wpf:Axis.Separator>
-                    </wpf:Axis>
-                </wpf:CartesianChart.AxisX>
-                <wpf:CartesianChart.AxisY>
-                    <wpf:Axis
-                            Unit="1" MinValue="-512" MaxValue="512" >
-                        <wpf:Axis.Separator>
-                            <wpf:Separator Step="100" />
-                        </wpf:Axis.Separator>
-                    </wpf:Axis>
-                </wpf:CartesianChart.AxisY>
-            </wpf:CartesianChart>
+                </lvc:CartesianChart.Series>
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Unit="100" >
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="100" />
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Unit="1" MinValue="-512" MaxValue="512" >
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="100" />
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
         </Grid>
         
     </Grid>
