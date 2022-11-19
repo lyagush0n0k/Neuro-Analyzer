@@ -9,9 +9,9 @@
     d:DesignHeight="450" d:DesignWidth="800"
     Title="GraphPage">
 
-    <Grid>
-        <StackPanel x:Name="MainStack" VerticalAlignment="Center">
-            <lvc:CartesianChart AnimationsSpeed="0:0:0.1" Hoverable="True" DataTooltip="{x:Null}">
+    <Grid Margin="20" x:Name="grid">
+        <StackPanel x:Name="MainStack" VerticalAlignment="Center" Height="{Binding ActualHeight, ElementName=grid, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=grid, Mode=OneWay}">
+            <lvc:CartesianChart AnimationsSpeed="0:0:0.1" Hoverable="True" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
                 <lvc:CartesianChart.Series>
                     <lvc:LineSeries Values="{Binding Values}"
                                     PointGeometry="{x:Null}"
@@ -23,14 +23,21 @@
                 </lvc:CartesianChart.Series>
                 <lvc:CartesianChart.AxisX>
                     <lvc:Axis
-                        Unit="100">
+                        Unit="100" >
                         <lvc:Axis.Separator>
                             <lvc:Separator Step="100" />
                         </lvc:Axis.Separator>
                     </lvc:Axis>
                 </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis
+                        Unit="1" MinValue="-512" MaxValue="512" >
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="100" />
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
             </lvc:CartesianChart>
-
         </StackPanel>
     </Grid>
 </Page>
