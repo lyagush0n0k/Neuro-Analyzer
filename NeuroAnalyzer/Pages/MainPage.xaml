@@ -1,58 +1,80 @@
-﻿<Page x:Class="NeuroAnalyzer.MainPage"
+﻿<Page x:Class="NeuroAnalyzer.Pages.MainPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:NeuroAnalyzer"
-      mc:Ignorable="d" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainPage">
 
-    <Grid Background="White">
+    <Grid Margin="20,20,20,20">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="70"/>
+            <RowDefinition />
+            <RowDefinition Height="70" />
         </Grid.RowDefinitions>
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
-        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,40,0,20" HorizontalAlignment="Center">
-            <Button Width="200" FontSize="24" Foreground="White" BorderBrush="{x:Null}">
+        <Grid Grid.Row="0" Margin="0,0,0,20" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="NeuroButton" Click="Button_Neuro_Click" Grid.Column="0" FontSize="24" Foreground="White"
+                    BorderBrush="{x:Null}">
                 <Button.Background>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg"/>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
-                    <TextBlock Text="Нейро тестирование" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=NeuroButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=NeuroButton, Mode=OneWay}">
+                    <TextBlock Text="Нейродиагностика" TextWrapping="Wrap" VerticalAlignment="Center"
+                               TextAlignment="Center" />
                 </Grid>
             </Button>
-            <Button Click="LectureButton_Click" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}">
+            <Button x:Name="LecturesButton" Grid.Column="1" Click="LectureButton_Click" FontSize="24" Margin="10,0,0,0"
+                    Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Lectures on psychology.jpg"/>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Lectures on psychology.jpg" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
-                    <TextBlock Text="Лекции по психолгии" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=LecturesButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=LecturesButton, Mode=OneWay}">
+                    <TextBlock Text="Полезные материалы" TextWrapping="Wrap" VerticalAlignment="Center"
+                               TextAlignment="Center" />
                 </Grid>
             </Button>
-            <Button Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White" BorderBrush="{x:Null}">
+            <Button x:Name="PsyhoTestButton" Grid.Column="2" FontSize="24" Margin="10,0,0,0" Foreground="White"
+                    BorderBrush="{x:Null}" Click="ToPsycho_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Psychological testing.jpg" AlignmentX="Center"/>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Psychological testing.jpg"
+                                AlignmentX="Center" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
-                    <TextBlock Text="Психологическое тестирование" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center"/>
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=PsyhoTestButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=PsyhoTestButton, Mode=OneWay}">
+                    <TextBlock Text="Психологическое тестирование" TextWrapping="Wrap" VerticalAlignment="Center"
+                               TextAlignment="Center" />
                 </Grid>
             </Button>
-        </StackPanel>
+            <Button x:Name="Game" Grid.Column="3" FontSize="24" Margin="10,0,0,0" Foreground="White"
+                    BorderBrush="{x:Null}" Click="ToGame_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/GamePage.png"
+                                AlignmentX="Center" />
+                </Button.Background>
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=PsyhoTestButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=PsyhoTestButton, Mode=OneWay}">
+                    <TextBlock Text="Игра нейродерево" TextWrapping="Wrap" VerticalAlignment="Center"
+                               TextAlignment="Center" />
+                </Grid>
+            </Button>
+            
+        </Grid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,20,0" Height="50">
-            <Button Width="50" BorderBrush="{x:Null}">
+            <Button Width="50" BorderBrush="{x:Null}" Click="ToSettings_Click">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Images/Settings.png"/>
+                    <ImageBrush ImageSource="/Images/Settings.png" />
                 </Button.Background>
             </Button>
             <Button Width="50" Margin="20,0,0,0" BorderBrush="{x:Null}">
                 <Button.Background>
-                    <ImageBrush ImageSource="/Images/Information.png"/>
+                    <ImageBrush ImageSource="/Images/Information.png" />
                 </Button.Background>
             </Button>
         </StackPanel>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
     </Grid>
 </Page>

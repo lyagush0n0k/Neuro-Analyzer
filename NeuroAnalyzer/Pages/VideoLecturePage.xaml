@@ -1,42 +1,56 @@
-﻿<Page x:Class="NeuroAnalyzer.VideoLecturePage"
+﻿<Page x:Class="NeuroAnalyzer.Pages.VideoLecturePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:NeuroAnalyzer" xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
-      mc:Ignorable="d" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+      mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="VideoLecturePage">
-    <Grid Background="White">
-        <Image Source="/Images/Background.png" Stretch="Fill" Grid.RowSpan="2"/>
-        <Grid Margin="20,20,20,20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="300"/>
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <ScrollViewer>
+            <Grid Margin="20,20,20,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="300" />
+                </Grid.ColumnDefinitions>
 
-        <StackPanel>
-            <wpf:ChromiumWebBrowser x:Name="Browser" Address="http://ipkfp.nspu.ru/file.php/1/Rogov_E.I._-_Nastolnaja_kniga_prakticheskogo_psikhologa_1.pdf" Height="295" Margin="0,0,0,5"/>
-            <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="30"/>
-                <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
-            </Grid>
-            <Grid Margin="0,5,0,0">
-                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="110"/>
-                <TextBlock x:Name="Description" Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время." TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
-            </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1,5*"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <wpf:ChromiumWebBrowser x:Name="Browser" Margin="0,0,0,5" />
+                    <StackPanel Grid.Row="1">
+                        <Grid>
+                            <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                            <TextBlock x:Name="Name" Text="Джон Кехо. Как избавиться от страха и тревожности?"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="Wrap" Foreground="White" Margin="10,10,10,10"/>
+                        </Grid>
+                        <Grid Margin="0,5,0,0">
+                            <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                            <TextBlock x:Name="Description"
+                                   Text="Преодоление страхов, глубоко укоренившихся в нас, - непростая задача, но она может стать возможностью. Избавиться от страха можно, и это можно сделать эффективно, но вы должны быть готовы потратить на это время."
+                                   TextWrapping="Wrap" Foreground="White" HorizontalAlignment="Center" Margin="10,10,10,10"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
 
-        </StackPanel>
-        <StackPanel Margin="20,0,0,0" Grid.Column="1">
-            <Grid>
-                <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" Height="60"/>
-                <TextBlock Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" HorizontalAlignment="Center"/>
+                <StackPanel Margin="20,0,0,0" Grid.Column="1">
+                    <Grid>
+                        <Rectangle RadiusX="15" RadiusY="15" Fill="#FF2C99B0" />
+                        <TextBlock Margin="10,10,10,10" Text="Другие лекции" FontSize="25" TextWrapping="Wrap" VerticalAlignment="Center"
+                                   Foreground="White" HorizontalAlignment="Center" />
+                    </Grid>
+                    <Image Margin="0,10,0,0" Source="/Images/Video lecture2.png" Stretch="Fill" />
+                    <Image Margin="0,10,0,0" Source="/Images/Video lecture3.png" Stretch="Fill" />
+                    <Button Margin="0,10,0,0" x:Name="ReturnBtn" Style="{DynamicResource RoundButton}"
+                            Background="#FF2C99B0" BorderBrush="{x:Null}" Foreground="White" FontSize="15"
+                            Click="ReturnBtn_Click">
+                        <TextBlock Margin="10,10,10,10" Text="Перейти к предыдущему разделу"/>
+                    </Button>
+                </StackPanel>
             </Grid>
-            <Image Margin="0,10,0,0" Source="/Images/Video lecture2.png" Stretch="Fill"/>
-            <Image Margin="0,10,0,0" Source="/Images/Video lecture3.png" Stretch="Fill"/>
-        </StackPanel>
-
-    </Grid>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2"></Frame>
+        </ScrollViewer>
     </Grid>
 </Page>

@@ -15,7 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Images\Arrow.png" />
     <None Remove="Images\Background.png" />
+    <None Remove="Images\GamePage.png" />
     <None Remove="Images\Good.png" />
     <None Remove="Images\GoodGreen.png" />
     <None Remove="Images\Information.png" />
@@ -33,6 +35,13 @@
     <None Remove="Images\Neuro testing.jpg" />
     <None Remove="Images\Psychological testing.jpg" />
     <None Remove="Images\Settings.png" />
+    <None Remove="Images\Trees\Tree1.png" />
+    <None Remove="Images\Trees\Tree2.png" />
+    <None Remove="Images\Trees\Tree3.png" />
+    <None Remove="Images\Trees\Tree4.png" />
+    <None Remove="Images\Trees\Tree5.png" />
+    <None Remove="Images\Trees\Tree6.png" />
+    <None Remove="Images\Trees\Tree7.png" />
     <None Remove="Images\Unsatisfactory.png" />
     <None Remove="Images\UnsatisfactoryRed.png" />
     <None Remove="Images\Video lecture1.png" />
@@ -42,6 +51,7 @@
 
   <ItemGroup>
     <PackageReference Include="CefSharp.Wpf.NETCore" Version="107.1.90" />
+    <PackageReference Include="LiveCharts.Wpf" Version="0.9.7" />
     <PackageReference Include="System.IO.Ports" Version="7.0.0" />
   </ItemGroup>
 
@@ -56,7 +66,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Arrow.png" />
     <Resource Include="Images\Background.png" />
+    <Resource Include="Images\GamePage.png" />
     <Resource Include="Images\Good.png" />
     <Resource Include="Images\GoodGreen.png" />
     <Resource Include="Images\Information.png" />
@@ -74,6 +86,13 @@
     <Resource Include="Images\Neuro testing.jpg" />
     <Resource Include="Images\Psychological testing.jpg" />
     <Resource Include="Images\Settings.png" />
+    <Resource Include="Images\Trees\Tree1.png" />
+    <Resource Include="Images\Trees\Tree2.png" />
+    <Resource Include="Images\Trees\Tree3.png" />
+    <Resource Include="Images\Trees\Tree4.png" />
+    <Resource Include="Images\Trees\Tree5.png" />
+    <Resource Include="Images\Trees\Tree6.png" />
+    <Resource Include="Images\Trees\Tree7.png" />
     <Resource Include="Images\Unsatisfactory.png" />
     <Resource Include="Images\UnsatisfactoryRed.png" />
     <Resource Include="Images\Video lecture1.png" />

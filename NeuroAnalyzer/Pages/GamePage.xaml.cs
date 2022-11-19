@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NeuroAnalyzer
+namespace NeuroAnalyzer.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для Instruction_manual.xaml
+    /// Логика взаимодействия для GamePage.xaml
     /// </summary>
-    public partial class Instruction_manual : Window
+    public partial class GamePage : Page
     {
-        public Instruction_manual()
+        public GamePage()
         {
             InitializeComponent();
         }

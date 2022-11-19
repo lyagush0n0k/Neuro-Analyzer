@@ -3,11 +3,12 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:NeuroAnalyzer"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        ResizeMode="CanMinimize">
+        Title="Neuro Analyzer" Height="450" Width="800" Closing="Window_Closing"
+        d:MinHeight="450" d:MinWidth="800"
+        ResizeMode="CanResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Frame x:Name="MainFrame" Grid.RowSpan="2" NavigationUIVisibility="Hidden"></Frame>
+        <Image Source="/Images/Background.png" Stretch="Fill" />
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" />
     </Grid>
 </Window>

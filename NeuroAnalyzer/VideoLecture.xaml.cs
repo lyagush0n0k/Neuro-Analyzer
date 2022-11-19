@@ -3,7 +3,7 @@
 namespace NeuroAnalyzer
 {
     /// <summary>
-    /// Логика взаимодействия для VideoLecture.xaml
+    ///     Логика взаимодействия для VideoLecture.xaml
     /// </summary>
     public partial class VideoLecture : Window
     {
@@ -14,7 +14,7 @@ namespace NeuroAnalyzer
             Browser.LoadUrlAsync(a.URL);
             Name.Text = a.Title;
             Description.Text = a.Description;
-            this.Title = a.Title;
+            Title = a.Title;
         }
     }
 }
