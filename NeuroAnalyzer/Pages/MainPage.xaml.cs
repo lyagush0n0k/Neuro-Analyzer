@@ -37,5 +37,10 @@ namespace NeuroAnalyzer.Pages
         {
             NavigationService.Navigate(new PsychoTest());
         }
+
+        private void ToGame_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new GamePage());
+        }
     }
 }
