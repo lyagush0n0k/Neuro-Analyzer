@@ -73,7 +73,11 @@ namespace NeuroAnalyzer.Pages
 
                     if (Values.Count > 200) Values.RemoveAt(0);
                     if (Values2.Count > 32) Values2.RemoveAt(0);
-                    PulseText.Text = SerialInterfaceClass.pulsePerMinte.ToString();
+
+                    Dispatcher.Invoke(() =>
+                    {
+                        PulseText.Text = SerialInterfaceClass.pulsePerMinte.ToString();
+                    });
                 }
             });
 
