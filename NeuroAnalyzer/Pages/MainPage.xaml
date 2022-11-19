@@ -18,33 +18,33 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Button Click="Button_Neuro_Click" Grid.Column="0" Width="200" FontSize="24" Foreground="White"
+            <Button x:Name="NeuroButton" Click="Button_Neuro_Click" Grid.Column="0" Width="200" FontSize="24" Foreground="White"
                     BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Neuro testing.jpg" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=NeuroButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=NeuroButton, Mode=OneWay}">
                     <TextBlock Text="Нейро тестирование" TextWrapping="Wrap" VerticalAlignment="Center"
                                TextAlignment="Center" />
                 </Grid>
             </Button>
-            <Button Grid.Column="1" Click="LectureButton_Click" Width="200" FontSize="24" Margin="10,0,0,0"
+            <Button x:Name="LecturesButton" Grid.Column="1" Click="LectureButton_Click" Width="200" FontSize="24" Margin="10,0,0,0"
                     Foreground="White" BorderBrush="{x:Null}">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Lectures on psychology.jpg" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=LecturesButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=LecturesButton, Mode=OneWay}">
                     <TextBlock Text="Лекции по психолгии" TextWrapping="Wrap" VerticalAlignment="Center"
                                TextAlignment="Center" />
                 </Grid>
             </Button>
-            <Button Grid.Column="2" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White"
+            <Button x:Name="PsyhoTestButton" Grid.Column="2" Width="200" FontSize="24" Margin="10,0,0,0" Foreground="White"
                     BorderBrush="{x:Null}" Click="ToPsycho_Click">
                 <Button.Background>
                     <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Psychological testing.jpg"
                                 AlignmentX="Center" />
                 </Button.Background>
-                <Grid Background="#7F000000" Height="304" Width="200">
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=PsyhoTestButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=PsyhoTestButton, Mode=OneWay}">
                     <TextBlock Text="Психологическое тестирование" TextWrapping="Wrap" VerticalAlignment="Center"
                                TextAlignment="Center" />
                 </Grid>
