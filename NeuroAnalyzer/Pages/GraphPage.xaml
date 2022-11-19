@@ -35,6 +35,18 @@
 
         </lvc:CartesianChart>
         <Grid Grid.Row="1" Name="GraphGrid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="1">
+                <TextBlock FontSize="30" >
+                    <Run Text="Пульс"/>
+                </TextBlock>
+                <TextBlock x:Name="PulseText" FontSize="35" >
+                </TextBlock>
+            </StackPanel>
+
             <lvc:CartesianChart DisableAnimations="True" Hoverable="False" DataTooltip="{x:Null}" Width="{Binding ActualWidth, ElementName=MainStack, Mode=OneWay}" Height="{Binding ActualHeight, ElementName=MainStack, Mode=OneWay}">
                 <lvc:CartesianChart.Series>
                     <lvc:LineSeries Values="{Binding Values}"
