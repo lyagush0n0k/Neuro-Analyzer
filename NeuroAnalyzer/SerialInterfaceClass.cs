@@ -75,12 +75,8 @@ namespace NeuroAnalyzer
 
                     var l = _port.ReadByte();
                     var h = _port.ReadByte();
-                    pulsePerMinte = ((h << 8) | l) - 512;
-                    l = _port.ReadByte();
-                    h = _port.ReadByte();
-                    pulseInstability = ((h << 8) | l) - 512;
-                    l = _port.ReadByte();
-                    h = _port.ReadByte();
+                    pulsePerMinte = _port.ReadByte();
+                    pulseInstability = _port.ReadByte();
                     graphPoint = ((h << 8) | l) - 512;
                     _graphData.Add(graphPoint);
                     _graphData.Remove(0);
