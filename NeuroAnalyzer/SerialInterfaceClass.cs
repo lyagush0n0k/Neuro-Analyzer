@@ -71,7 +71,7 @@ namespace NeuroAnalyzer
                     }
 
                     if (_port.ReadByte() != 0xAB) continue;
-                    Thread.Sleep(2);
+                    Thread.Sleep(10);
 
                     var l = _port.ReadByte();
                     var h = _port.ReadByte();

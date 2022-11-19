@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +25,33 @@ namespace NeuroAnalyzer.Pages
         public PsyhoPage()
         {
             InitializeComponent();
+        }
+        
+        private void PsycoLoaded(object sender, RoutedEventArgs e)
+        {
+            Task.Run(() =>
+            {
+                Stopwatch sw = new();
+                sw.Start();
+                double alphaLevel = 0;
+                int num_samples = 0;
+                while (sw.ElapsedMilliseconds < 20000)
+                {
+                    Dispatcher.Invoke(() =>
+                    {
+                        PsyhoProgress.Value = sw.ElapsedMilliseconds;
+                    });
+                    int[] spectrum = SerialInterfaceClass.GetSpectrumData();
+                    int thisAlpha = 0;
+                    for (int i = 5; i < 10; i++) thisAlpha += spectrum[i];
+                    alphaLevel += thisAlpha;
+                    num_samples++;
+                }
+
+                alphaLevel /= num_samples;
+                MessageBox.Show(alphaLevel.ToString());
+            });
+
         }
 
         private void Button_Back_Click(object sender, RoutedEventArgs e)

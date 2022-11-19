@@ -22,16 +22,14 @@ namespace NeuroAnalyzer.Pages
         
         public ChartValues<MeasureModel> Values { get; set; }
         public ChartValues<int> Values1 { get; set; }
-        public ChartValues<int> Values2 { get; set; }
+        public ChartValues<double> Values2 { get; set; }
 
         public GraphPage()
         {
             InitializeComponent();
 
-            Loaded += GraphLoaded;
-
             Values1 = new ChartValues<int>();
-            Values2 = new ChartValues<int>();
+            Values2 = new ChartValues<double>();
 
             var mapper = Mappers.Xy<MeasureModel>()
                 .X(x => x.ElapsedMilliseconds)
@@ -41,6 +39,7 @@ namespace NeuroAnalyzer.Pages
             Charting.For<MeasureModel>(mapper);
             
             Values = new ChartValues<MeasureModel>();
+            double alphaLevel = 0;
             var sw = new Stopwatch();
             sw.Start();
 
@@ -49,6 +48,8 @@ namespace NeuroAnalyzer.Pages
                 while (true)
                 {
                     Thread.Sleep(10);
+                    
+                    int[] spectrumData = SerialInterfaceClass.GetSpectrumData();
 
                     //we add the lecture based on our StopWatch instance
                     Values.Add(new MeasureModel
@@ -58,43 +59,24 @@ namespace NeuroAnalyzer.Pages
                     });
 
                     Values1.Clear();
-                    Values2.Clear();
                     for (int i = 0; i < 32; i++)
                     {
                         Values1.Add(spectrumData[i]);
                     }
 
-                    for (int i = 5; i < 10; i++)
-                    {
-                        Values2.Add(spectrumData[i] * 5);
-                    }
+                    int sum = 0;
+                    for(int i = 5; i < 10; i++) sum += spectrumData[i];
+                    sum *= 2;
+                    alphaLevel = 0.03*sum + 0.97*alphaLevel;
+                    
+                    Values2.Add(alphaLevel);
 
                     if (Values.Count > 200) Values.RemoveAt(0);
+                    if (Values2.Count > 32) Values2.RemoveAt(0);
                 }
             });
 
             DataContext = this;
-        }
-
-        private void GraphLoaded(object sender, RoutedEventArgs e)
-        {
-            graphUpdateTimer = new Timer(RefreshGraph, new AutoResetEvent(false), 0, 10);
-        }
-        int[] spectrumData = SerialInterfaceClass.GetSpectrumData();
-
-        private void RefreshGraph(object? obj)
-        {
-            Values1.Clear();
-            Values2.Clear();
-            for (int i = 0; i < 32; i++)
-            {
-                Values1.Add(spectrumData[i]);
-            }
-
-            for (int i = 5; i < 10; i++)
-            {
-                Values2.Add(spectrumData[i] * 5);
-            }
         }
 
         //private void RefreshGraph(object? obj)

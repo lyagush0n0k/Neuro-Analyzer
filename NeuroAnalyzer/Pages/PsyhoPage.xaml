@@ -6,7 +6,8 @@
       xmlns:local="clr-namespace:NeuroAnalyzer.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PsyhoPage">
+      Title="PsyhoPage"
+      Loaded="PsycoLoaded">
 
     <Grid Margin="20,20,20,20">
         <Grid.RowDefinitions>
@@ -37,7 +38,7 @@
             </StackPanel>
 
             <StackPanel Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <ProgressBar x:Name="PsyhoProgress" MinWidth="500" Height="20" Value="45"/>
+                <ProgressBar x:Name="PsyhoProgress" MinWidth="500" Height="20" Minimum="0" Maximum="20000"/>
                 <TextBlock x:Name="PsyhoText" Text="Анализ..." FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
             </StackPanel>
         </Grid>
