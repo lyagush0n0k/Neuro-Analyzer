@@ -17,6 +17,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
                 <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Button x:Name="NeuroButton" Click="Button_Neuro_Click" Grid.Column="0" FontSize="24" Foreground="White"
                     BorderBrush="{x:Null}">
@@ -49,6 +50,18 @@
                                TextAlignment="Center" />
                 </Grid>
             </Button>
+            <Button x:Name="Game" Grid.Column="3" FontSize="24" Margin="10,0,0,0" Foreground="White"
+                    BorderBrush="{x:Null}" Click="ToGame_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="UniformToFill" ImageSource="/Images/GamePage.png"
+                                AlignmentX="Center" />
+                </Button.Background>
+                <Grid Background="#7F000000" Height="{Binding ActualHeight, ElementName=PsyhoTestButton, Mode=OneWay}" Width="{Binding ActualWidth, ElementName=PsyhoTestButton, Mode=OneWay}">
+                    <TextBlock Text="Игра нейродерево" TextWrapping="Wrap" VerticalAlignment="Center"
+                               TextAlignment="Center" />
+                </Grid>
+            </Button>
+            
         </Grid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0,0,20,0" Height="50">
